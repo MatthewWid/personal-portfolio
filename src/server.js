@@ -19,7 +19,6 @@ app.use(serve_favicon(path.join(__dirname, "../public/favicon.ico")));
 
 // Set up router that acts on requests to root ('/') and below
 app.use("/", routes);
-
 app.set("port", process.env.PORT || 80);
 const server = app.listen(app.get("port"), () => {
 	console.info(`Now listening on PORT ${app.get("port")}.`);
