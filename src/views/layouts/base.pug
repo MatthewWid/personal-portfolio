@@ -1,7 +1,17 @@
 doctype html
 html
 	head
-		title Matthew W.
+		title #{title && (title + " - ")}Matthew Widdicombe
+		link(rel="stylesheet" href="./css/global.css")
 
 	body
+		block header
+			header
+				h1 MW
+				nav
+					ul
+						li about me
+						li projects
+						li contact
+
 		block content
