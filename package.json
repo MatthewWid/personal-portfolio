@@ -4,9 +4,12 @@
   "repository": "git@github.com:MatthewWid/personal-portfolio.git",
   "license": "MIT",
   "scripts": {
-    "start": "node ./src/server.js",
-    "dev": "nodemon ./src/server.js",
-    "build": "webpack --mode development"
+    "sass": "node-sass ./src/styles/ -o ./public/css/",
+    "sass:watch": "node-sass -w ./src/styles/ -o ./public/css/",
+    "watch": "nodemon ./src/server.js",
+    
+    "start": "npm run sass && node ./src/server.js",
+    "dev": "concurrently \"npm run sass:watch\" \"npm run watch\""
   },
   "dependencies": {
     "dotenv": "^6.2.0",
@@ -15,6 +18,8 @@
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
+    "concurrently": "^4.1.0",
+    "node-sass": "^4.11.0",
     "nodemon": "^1.18.9"
   }
 }
