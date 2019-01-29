@@ -2,16 +2,20 @@ doctype html
 html
 	head
 		title #{title && (title + " - ")}Matthew Widdicombe
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700|Source+Sans+Pro:600")
 		link(rel="stylesheet" href="./css/global.css")
+		block head
 
 	body
 		block header
 			header
-				h1 MW
+				h1
+					a(href="/") M#[span •]W
 				nav
 					ul
-						li about me
-						li projects
-						li contact
+						li: a(href="/about") about me
+						li: a(href="/projects") projects
+						li: a(href="/contact") contact
 
-		block content
+		main.content
+			block content

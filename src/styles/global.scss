@@ -1,7 +1,45 @@
+@import "_reset";
 @import "_colours";
 
-header h1 {
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke: .45px;
-    color: $darkest-grey;
+body {
+	min-height: 100vh;
+	background-color: #fdfdfd;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.6rem 2rem;
+
+	h1 {
+		font-family: "Montserrat", sans-serif;
+		font-size: 2rem;
+		-webkit-font-smoothing: antialiased;
+		-webkit-text-stroke: .45px;
+		color: $darkest-grey;
+
+		span {
+			color: #e93434;
+		}
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
+		display: block;
+	}
+	nav ul {
+		list-style: none;
+
+		li {
+			display: inline-block;
+			font-family: "Source Sans Pro", sans-serif;
+			font-size: 1.1rem;
+			color: $darkest-grey;
+
+			a {
+				padding: 1rem;
+			}
+		}
+	}
 }
