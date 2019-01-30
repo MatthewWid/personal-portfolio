@@ -39,6 +39,21 @@ header {
 
 			a {
 				padding: 1rem;
+				position: relative;
+
+				&:after {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 100%;
+					width: 0%;
+					height: 1px;
+					background-color: $darkest-grey;
+					transition: width .1s ease-out;
+				}
+				&:hover:after {
+					width: 100%;
+				}
 			}
 		}
 	}
