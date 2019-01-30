@@ -1,5 +1,26 @@
+@import "_colours.scss";
+
+body {
+	padding-top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .content {
-	p {
-		color: #555;
+	transform: translateY(-10vh);
+
+	.title {
+		font-family: "Montserrat", sans-serif;
+		color: $darkest-grey;
+
+		p {
+			font-size: 1rem;
+		}
+		h1 {
+			font-size: 5rem;
+			margin-left: -6px;
+			margin-bottom: 3px;
+		}
 	}
 }
