@@ -12,15 +12,47 @@ body {
 
 	.title {
 		font-family: "Montserrat", sans-serif;
-		color: $darkest-grey;
 
 		p {
+			color: $accompany-grey;
 			font-size: 1rem;
 		}
 		h1 {
+			color: $darkest-grey;
 			font-size: 5rem;
 			margin-left: -6px;
-			margin-bottom: 8px;
+			margin-bottom: 2px;
+		}
+		.links {
+			margin-top: 18px;
+			display: flex;
+			// justify-content: space-between;
+			align-items: center;
+			
+			.social-media {
+				margin-right: 24px;
+
+				img {
+					width: 40px;
+					margin-right: 16px;
+					transition: transform .1s ease;
+
+					&:hover {
+						transform: scale(1.1);
+					}
+				}
+			}
+
+			a.project-link {
+				font-size: 1.1rem;
+				color: $accompany-grey;
+				text-decoration: none;
+				padding: 16px 0;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }
