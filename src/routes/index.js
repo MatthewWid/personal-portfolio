@@ -1,14 +1,8 @@
 const router = require("express").Router();
 
 router.get("/", (req, res) => {
-	res.render("home", {
+	res.render("main", {
 		title: "Home"
-	});
-});
-
-router.get("/contact", (req, res) => {
-	res.render("contact", {
-		title: "Contact"
 	});
 });
 

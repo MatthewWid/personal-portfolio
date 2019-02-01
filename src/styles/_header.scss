@@ -1,13 +1,9 @@
-@import "_reset";
-@import "_colours";
-
 body, body > header {
 	box-sizing: border-box;
 }
 
 body {
 	min-height: 100vh;
-	padding-top: 100px;
 	background-color: #fdfdfd;
 }
 
