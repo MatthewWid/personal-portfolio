@@ -1,9 +1,15 @@
 extends ./layouts/base.pug
 
 include ./partials/_hero.pug
+include ./partials/_contact.pug
 
 block head
 	link(rel="stylesheet" href="./css/main.css")
 
 block content
+	.colour
+	
 	+hero
+	+contact
+
+	section.colour

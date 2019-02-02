@@ -3,4 +3,27 @@
 
 @import "_header.scss";
 @import "_hero.scss";
-// @import "_contact.scss";
+@import "_contact.scss";
+
+section {
+	padding: 120px 0;
+}
+
+$colour-gradient: linear-gradient(to right, #a904a9, #f92b77, #f91e1e, #f7f705, #06b606);
+
+div.colour {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 8px;
+	
+	// border-top: 1px solid #888;
+	background: $colour-gradient;
+}
+
+section.colour {
+	padding: 0;
+	min-height: 60px;
+	background: $colour-gradient;
+}

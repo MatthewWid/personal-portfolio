@@ -1,13 +1,14 @@
 mixin contact
-	.contact-card
-		section
-			h1 Get in touch #[img(src="./images/speech-bubble.png" alt="Speech Bubble")]
-		section.icon-text
-			img(src="./images/email.svg" alt="Mail Icon")
-			p: a(href="mailto:matthew.widdi@gmail.com") matthew.widdi@gmail.com
-		section.icon-text
-			img(src="./images/linkedin-white.svg" alt="LinkedIn Logo")
-			p: a(href="https://www.linkedin.com/in/matthew-widdicombe") linkedin.com/in/matthew-widdicombe
-		section.icon-text
-			img(src="./images/github-white.svg" alt="GitHub Logo")
-			p: a(href="https://github.com/MatthewWid") github.com/MatthewWidd
+	section.contact-card
+		.contact-card-inner
+			.row
+				h1 Get in touch #[img(src="./images/speech-bubble.png" alt="Speech Bubble")]
+			.row.icon-text
+				img(src="./images/email.svg" alt="Mail Icon")
+				p: a(href="mailto:matthew.widdi@gmail.com") matthew.widdi@gmail.com
+			.row.icon-text
+				img(src="./images/linkedin-white.svg" alt="LinkedIn Logo")
+				p: a(href="https://www.linkedin.com/in/matthew-widdicombe") linkedin.com/in/matthew-widdicombe
+			.row.icon-text
+				img(src="./images/github-white.svg" alt="GitHub Logo")
+				p: a(href="https://github.com/MatthewWid") github.com/MatthewWidd
