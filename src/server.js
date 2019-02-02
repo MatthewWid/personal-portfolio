@@ -21,5 +21,5 @@ app.use(serve_favicon(path.join(__dirname, "../public/favicon.ico")));
 app.use("/", routes);
 app.set("port", process.env.PORT || 80);
 const server = app.listen(app.get("port"), () => {
-	console.info(`Now listening on PORT ${app.get("port")}.`);
+	console.info(`Express server listening on PORT ${app.get("port")}. (${server.address().address})`);
 });
