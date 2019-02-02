@@ -2,12 +2,14 @@ extends ./layouts/base.pug
 
 include ./partials/_hero.pug
 include ./partials/_contact.pug
+include ./partials/_project.pug
 
 block head
 	link(rel="stylesheet" href="./css/main.css")
 
 block content
 	+hero
+	+project("bonk-skins")
 	+contact
 
 	//- floating colour bar
