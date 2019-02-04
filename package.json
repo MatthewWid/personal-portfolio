@@ -4,8 +4,8 @@
   "repository": "git@github.com:MatthewWid/personal-portfolio.git",
   "license": "MIT",
   "scripts": {
-    "sass": "sass ./src/styles/:./public/css/",
-    "sass:watch": "sass --sourcemap=none --watch ./src/styles/:./public/css/",
+    "sass": "sass --sourcemap=none --style compressed ./src/styles/main.scss:./public/css/main.css",
+    "sass:watch": "sass --sourcemap=none --style expanded --watch ./src/styles/main.scss:./public/css/main.css",
     "watch": "nodemon ./src/server.js",
     "start": "npm run sass && node ./src/server.js",
     "dev": "concurrently \"npm run sass:watch\" \"npm run watch\""
