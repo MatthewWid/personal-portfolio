@@ -4,7 +4,7 @@ body, body > header {
 
 body {
 	min-height: 100vh;
-	background-color: #fdfdfd;
+	background-color: $bg-white;
 }
 
 header {
@@ -17,7 +17,8 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.6rem 2rem;
-	z-index: 10;
+	transition: padding .1s ease;
+	background-color: $bg-white;
 
 	h1 {
 		font-family: "Montserrat", sans-serif;
@@ -64,4 +65,11 @@ header {
 			}
 		}
 	}
+}
+
+header {
+	z-index: 2;
+}
+section.hero > div {
+	z-index: 3;
 }
