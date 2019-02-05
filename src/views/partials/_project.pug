@@ -1,2 +1,6 @@
-mixin project(slug, title, description, technology, github, demo)
-	section.project(class=slug)
+mixin project(title, technology, github, demo)
+	section.project(class!=attributes.class)
+		.project-section
+			.preview-image
+		.project-section
+			.info
