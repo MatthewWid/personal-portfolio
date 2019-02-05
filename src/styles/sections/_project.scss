@@ -25,4 +25,16 @@ section.project {
 			box-shadow: inset -60px 0 60px $bg-color;
 		}
 	}
+	&.reddit-bot {
+		$bg-color: #323232;
+		background-color: $bg-color;
+	}
+	&.strat-roulette {
+		$bg-color: #33658A;
+		background-color: $bg-color;
+	}
+	&.game-engine {
+		$bg-color: #3D7673;
+		background-color: $bg-color;
+	}
 }
