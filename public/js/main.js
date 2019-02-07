@@ -1,7 +1,7 @@
 // Alter header size when scrolling past hero section
 function checkScroll() {
 	const heroEl = document.querySelector("section.hero");
-	const minAt = heroEl.offsetTop + heroEl.offsetHeight - header.offsetHeight;
+	const minAt = heroEl.offsetTop + heroEl.offsetHeight - headerHeight;
 	if (window.scrollY > minAt) {
 		header.classList.add("mini");
 	} else {
@@ -10,6 +10,7 @@ function checkScroll() {
 }
 
 const header = document.getElementsByTagName("header")[0];
+const headerHeight = header.offsetHeight;
 window.addEventListener("scroll", checkScroll);
 
 checkScroll();
