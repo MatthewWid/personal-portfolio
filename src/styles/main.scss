@@ -5,20 +5,3 @@
 @import "./sections/_hero.scss";
 @import "./sections/_project.scss";
 @import "./sections/_contact.scss";
-
-div.colour {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 8px;
-	
-	// border-top: 1px solid #888;
-	background: $rainbow-gradient;
-}
-
-section.colour {
-	padding: 0;
-	min-height: 30px;
-	background: $rainbow-gradient;
-}
