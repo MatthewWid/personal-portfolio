@@ -2,7 +2,6 @@
 function checkScroll() {
 	const heroEl = document.querySelector("section.hero");
 	const minAt = heroEl.offsetTop + heroEl.offsetHeight - header.offsetHeight;
-	console.log(window.scrollY, minAt, window.scrollY > minAt);
 	if (window.scrollY > minAt) {
 		header.classList.add("mini");
 	} else {
