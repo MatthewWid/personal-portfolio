@@ -5,6 +5,10 @@ mixin project(title, technology, github, demo)
 		.project-section
 			.info
 				h1.info-title= title
-				.info-description
+				if block
+					.info-description
+						block
+				else
+					.info-description
 				.info-technology
 				.info-links
