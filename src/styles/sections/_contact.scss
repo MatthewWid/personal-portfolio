@@ -11,10 +11,10 @@ section.contact-card .contact-card-inner {
   max-width: 60%;
   // background: radial-gradient(circle farthest-corner at 11.3% -0.8%, rgba(153,14,241,1) 0%, rgba(41,3,101,1) 100.2%);
   background: linear-gradient(to bottom right, #ed5252, #8c0303);
-  padding: 22px 90px 22px 30px;
+  padding: 22px 60px 14px 60px;
   border-radius: 2px;
   box-shadow: 1px 2px 3px #b5b5b5;
-	font-family: "Montserrat", sans-serif;
+	font-family: "Roboto", sans-serif;
 
 	.row {
 		margin-bottom: 24px;
@@ -28,14 +28,18 @@ section.contact-card .contact-card-inner {
 			}
 			p {
 				margin-left: 16px;
-				letter-spacing: .2px;
+				letter-spacing: 1px;
 			}
 			a {
 				text-decoration: none;
 				color: $soft-white;
 			}
 		}
+		&.header {
+			text-align: center;
+		}
     h1 {
+			// font-family: "Montserrat", sans-serif;
 			font-size: 3rem;
 			color: $soft-white;
 
