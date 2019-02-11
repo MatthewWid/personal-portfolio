@@ -32,6 +32,7 @@ section.project {
 			.info-description {
 				font-family: "Roboto", sans-serif;
 				font-size: 1.2rem;
+				line-height: 1.3em;
 			}
 		}
 	}
@@ -49,7 +50,19 @@ section.project {
 	&.reddit-bot {
 		$bg-color: #323232;
 		background-color: $bg-color;
+		
+		h1.info-title {
+			position: relative;
 
+			&:before {
+				content: "Unofficial";
+				position: absolute;
+				left: 3px;
+				bottom: 100%;
+				font-size: .9rem;
+				color: #c0c0c0;
+			}
+		}
 		.preview-image {
 			background-image: url("../images/previews/reddit.png");
 			background-size: 18%;
