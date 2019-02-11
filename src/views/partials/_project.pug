@@ -1,4 +1,4 @@
-mixin project(title, technology, github, demo)
+mixin project(title, github, demo)
 	section.project(class!=attributes.class)
 		.project-section
 			.preview-image
@@ -11,4 +11,8 @@ mixin project(title, technology, github, demo)
 				else
 					.info-description
 				.info-technology
+					if tech
+						ul
+							each val in tech
+								li= val
 				.info-links

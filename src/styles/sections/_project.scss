@@ -34,6 +34,17 @@ section.project {
 				font-size: 1.2rem;
 				line-height: 1.3em;
 			}
+			.info-technology ul {
+				font-family: "Roboto", sans-serif;
+				li {
+					display: inline-block;
+					padding: 1rem;
+
+					&:first-of-type {
+						padding-left: 0;
+					}
+				}
+			}
 		}
 	}
 	&.bonk-skins {

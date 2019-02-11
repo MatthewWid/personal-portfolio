@@ -9,12 +9,17 @@ block head
 
 block content
 	+hero
-	+project("Bonk Skins")(class="bonk-skins")
+	- let tech;
+	- tech = ["PHP", "MySQL", "JavaScript", "SASS"];
+	+project("Bonk Skins")(class="bonk-skins", tech)
 		p Board of game avatars allowing users to create their own avatars with a rich interactive UI and then download and share their creations or post  them publicly to the front page.
+	- tech = ["Node.js", "MongoDB"];
 	+project("Reddit Moderation Bot")(class="reddit-bot")
 		p Bot for automatically tagging, analysing and moderating forum posts, managing user information and storing post information for statistical analysis.
+	- tech = ["PHP", "MySQL", "JavaScript"];
 	+project("Game Strategy Generator")(class="strat-roulette")
 		p Generate random user-made game strategies from a central database of strategies that users can contribute to and read from.
+	- tech = ["Node.js", "JavaScript", "Browserify"];
 	+project("Browser Game Engine")(class="game-engine")
 		p Canvas-based in-browser game engine that makes development easy by handling rendering, game states, user input and object management on-top of a completely custom event system.
 	+contact
