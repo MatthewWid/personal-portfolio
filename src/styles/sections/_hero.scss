@@ -40,6 +40,22 @@ section.hero {
 						transform: scale(1.1);
 					}
 				}
+				.hero-email {
+					display: inline-flex;
+					align-items: center;
+					
+					&:hover {
+						padding-right: 6rem;
+					}
+					&:hover .hero-email-text {
+						display: block;
+					}
+				}
+				.hero-email-text {
+					text-decoration: none;
+					color: $accompany-grey;
+					display: none;
+				}
 			}
 
 			a.project-link {
