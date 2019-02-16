@@ -1,4 +1,4 @@
-mixin project(title, github, demo)
+mixin project(title, repo, demo)
 	section.project(class!=attributes.class)
 		.project-section
 			.preview-image
@@ -16,3 +16,5 @@ mixin project(title, github, demo)
 							each val in tech
 								li= val
 				.info-links
+					if repo
+						a.info-link.repo-link(href=repo title=`${title} source code`) #[span source code]

@@ -45,6 +45,37 @@ section.project {
 					}
 				}
 			}
+			.info-links {
+				display: flex;
+				justify-content: space-evenly;
+				margin-top: 40px;
+
+				.info-link {
+					display: flex;
+					align-items: center;
+					color: $soft-white;
+					text-decoration: none;
+					font-family: "Roboto", sans-serif;
+					padding: 10px;
+					font-size: 1.4rem;
+					
+					span {
+						margin-top: -2%;
+					}
+					&:hover {
+						text-decoration: underline;
+					}
+					&:before {
+						content: "";
+						display: inline-block;
+						width: 24px;
+						height: 24px;
+						background-image: url("../images/icons/code.svg");
+						background-size: cover;
+						margin-right: .4em;
+					}
+				}
+			}
 		}
 	}
 	&.bonk-skins {
