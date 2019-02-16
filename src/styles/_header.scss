@@ -76,3 +76,9 @@ header {
 section.hero > div {
 	z-index: 3;
 }
+
+div.anchor {
+	height: 0;
+	position: relative;
+	top: -68px;
+}

@@ -8,7 +8,10 @@ block head
 	link(rel="stylesheet" href="./css/main.css")
 
 block content
+	.anchor
 	+hero
+	
+	.anchor#projects
 	- let tech;
 	- tech = ["PHP", "MySQL", "JavaScript", "SASS"];
 	+project("Bonk Skins", "https://github.com/MatthewWid/bonk-skins.io")(class="bonk-skins", tech)
@@ -22,6 +25,8 @@ block content
 	- tech = ["Node.js", "JavaScript", "Browserify"];
 	+project("Browser Game Engine", "https://github.com/MatthewWid/MobSin")(class="game-engine")
 		p Canvas-based browser game engine that handles rendering, game states, user input and object management on-top of a completely custom event system.
+	
+	.anchor#contact
 	+contact
 
 	script(src="./js/main.js")
