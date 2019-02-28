@@ -2,7 +2,7 @@ section.project {
 	min-height: 800px;
 	display: flex;
 	
-	&:nth-of-type(odd) {
+	&:nth-of-type(even) {
 		flex-direction: row-reverse;
 	}
 	.project-section {
@@ -30,19 +30,15 @@ section.project {
 				margin-left: -4px;
 			}
 			.info-description {
-				font-family: "Roboto", sans-serif;
 				font-size: 1.2rem;
 				line-height: 1.3em;
 			}
-			.info-technology ul {
-				font-family: "Roboto", sans-serif;
-				li {
-					display: inline-block;
-					padding: 1rem;
+			.info-technology ul li {
+				display: inline-block;
+				padding: 1rem;
 
-					&:first-of-type {
-						margin-left: -1rem;
-					}
+				&:first-of-type {
+					margin-left: -1rem;
 				}
 			}
 			.info-links {
@@ -111,9 +107,8 @@ section.project {
 		}
 	}
 	&.strat-roulette {
-		$bg-color: #33658A;
 		// $bg-color: #2e6186;
-		// $bg-color: #63a1c0;
+		$bg-color: #14507b;
 		background-color: $bg-color;
 
 		.preview-image {

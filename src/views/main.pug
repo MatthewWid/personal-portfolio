@@ -1,6 +1,7 @@
 extends ./layouts/base.pug
 
 include ./partials/_hero.pug
+include ./partials/_about.pug
 include ./partials/_contact.pug
 include ./partials/_project.pug
 
@@ -11,6 +12,9 @@ block content
 	.anchor
 	+hero
 	
+	.anchor#about-me
+	+about
+
 	.anchor#projects
 	- let tech;
 	- tech = ["PHP", "MySQL", "JavaScript", "SASS"];
