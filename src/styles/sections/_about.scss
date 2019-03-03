@@ -1,0 +1,15 @@
+section.about {
+	background-color: #be3239;
+	color: $soft-white;
+	min-height: 800px;
+
+	display: flex;
+
+	.about-section {
+		flex: 1;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
