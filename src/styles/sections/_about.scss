@@ -11,5 +11,40 @@ section.about {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		
+		.about-section-inner {
+			width: 90%;
+		}
+		
+		h1 {
+			margin-bottom: 1.2rem;
+		}
+		h2 {
+			margin-bottom: .6rem;
+		}
+		p {
+			font-size: 1.1rem;
+			margin-bottom: 2rem;
+		}
+		ul {
+
+			li {
+				margin-bottom: 1em;
+			}
+		}
+		h1, h2, p, ul, .about-section-links {
+			text-align: center;
+		}
+		.about-section-links span {
+			margin-right: 1rem;
+
+			a {
+				color: $soft-white;
+			}
+		}
+		.skills-tables {
+			display: flex;
+			justify-content: space-evenly;
+		}
 	}
 }
