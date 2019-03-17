@@ -56,12 +56,21 @@ section.project {
 					&:hover {
 						text-decoration: underline;
 					}
-					&:before {
+					&.repo-link:before {
 						content: "";
 						display: inline-block;
 						width: 24px;
 						height: 24px;
 						background-image: url("../images/icons/code.svg");
+						background-size: cover;
+						margin-right: .4em;
+					}
+					&.demo-link:before {
+						content: "";
+						display: inline-block;
+						width: 24px;
+						height: 24px;
+						background-image: url("../images/icons/globe.svg");
 						background-size: cover;
 						margin-right: .4em;
 					}

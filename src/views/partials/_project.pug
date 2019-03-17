@@ -18,3 +18,5 @@ mixin project(title, repo, demo)
 				.info-links
 					if repo
 						a.info-link.repo-link(href=repo title=`${title} source code` target="_blank") #[span source code]
+					if demo
+						a.info-link.demo-link(href=demo title=`${title} live demo` target="_blank") #[span live demo]
