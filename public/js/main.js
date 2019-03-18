@@ -23,6 +23,11 @@ function animateScroll() {
 
 	if (timeThrough != 1) {
 		requestAnimationFrame(animateScroll);
+	} else {
+		location.hash = targetEl.id.substring(targetEl.id.indexOf("#") + 1);
+		if (location.hash == "#hero") {
+			location.hash = "";
+		}
 	}
 }
 const initScroll = (evt) => {
@@ -30,20 +35,21 @@ const initScroll = (evt) => {
 
 	startScroll = window.scrollY;
 	startTime = performance.now();
+	targetScroll = targetEl.offsetTop;
 
 	animateScroll();
 }
 
 const duration = 250;
-let targetScroll, startScroll, startTime;
+let targetEl, targetScroll, startScroll, startTime;
 // Add event listeners to header logo and navigation items
 document.querySelectorAll("header nav ul li a").forEach((e) => {
 	e.addEventListener("click", (evt) => {
-		targetScroll = document.getElementById(e.href.substring(e.href.indexOf("#") + 1)).offsetTop;
+		targetEl = document.getElementById(e.href.substring(e.href.indexOf("#") + 1));
 		initScroll(evt);
 	});
 });
 document.querySelector("header h1 a").addEventListener("click", (evt) => {
-	targetScroll = document.getElementById("hero").offsetTop;
+	targetEl = document.getElementById("hero");
 	initScroll(evt);
 })
