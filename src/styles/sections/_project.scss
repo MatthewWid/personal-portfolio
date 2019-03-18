@@ -79,19 +79,16 @@ section.project {
 		}
 	}
 	&.bonk-skins {
-		// $bg-color: #10833d;
-		$bg-color: #1f904c;
-		background-color: $bg-color;
+		background-color: $bonk-skins-bg;
 
 		.preview-image {
 			background-image: url("../images/previews/bonkskins-preview.png");
 			background-size: cover;
-			box-shadow: inset -80px 0 60px -30px $bg-color;
+			box-shadow: inset -80px 0 60px -30px $bonk-skins-bg;
 		}
 	}
 	&.reddit-bot {
-		$bg-color: #323232;
-		background-color: $bg-color;
+		background-color: $reddit-bot-bg;
 		
 		h1.info-title {
 			position: relative;
@@ -111,24 +108,21 @@ section.project {
 		}
 	}
 	&.strat-roulette {
-		// $bg-color: #2e6186;
-		$bg-color: #14507b;
-		background-color: $bg-color;
+		background-color: $strat-roulette-bg;
 
 		.preview-image {
 			background-image: url("../images/previews/stratroulette-preview.png");
 			background-size: cover;
 			width: 100%;
 			height: 100%;
-			box-shadow: inset -80px 0 60px -30px $bg-color;
+			box-shadow: inset -80px 0 60px -30px $strat-roulette-bg;
 		}
 		.info {
 			max-width: 90%;
 		}
 	}
 	&.game-engine {
-		$bg-color: #ca6a8a;
-		background-color: $bg-color;
+		background-color: $game-engine-bg;
 
 		.preview-image {
 			background-image: url("../images/previews/mobsin.png");
