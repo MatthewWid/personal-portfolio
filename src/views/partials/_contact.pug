@@ -1,16 +1,9 @@
 //- TODO:
 //- Redo contact card with flat design.
 mixin contact
-	section.contact-card
-		.contact-card-inner
-			.row.header
-				h1 Get in touch #[img(src="./images/icons/speech-bubble.png" alt="Speech Bubble")]
-			.row.icon-text
-				img(src="./images/icons/email.svg" alt="Mail Icon")
-				p: a(href="mailto:matthew.widdi@gmail.com") matthew.widdi@gmail.com
-			.row.icon-text
-				img(src="./images/icons/linkedin-white.svg" alt="LinkedIn Logo")
-				p: a(href="https://www.linkedin.com/in/matthew-widdicombe") linkedin.com/in/matthew-widdicombe
-			.row.icon-text
-				img(src="./images/icons/github-white.svg" alt="GitHub Logo")
-				p: a(href="https://github.com/MatthewWid") github.com/MatthewWidd
+	section.contact
+		h1 Get in touch
+		.contact-email
+			a(href="mailto:matthew.widdi@gmail.com" title="Email me")
+				img(src="./images/icons/email.svg" alt="Email Icon")
+				span.hero-email-text matthew.widdi@gmail.com
