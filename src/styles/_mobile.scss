@@ -2,13 +2,11 @@
 	html, body {
 		overflow-x: hidden;
 	}
-	header {
-		nav ul li {
-			display: block;
+	header nav ul li {
+		display: block;
 
-			a {
-				padding: .2rem;
-			}
+		a {
+			padding: .2rem;
 		}
 	}
 	main.content {
@@ -58,6 +56,16 @@
 				.preview-image {
 					height: 40vh !important;
 				}
+			}
+		}
+		&.contact {
+			flex-direction: column;
+
+			h1 {
+				font-size: 2.8rem;
+			}
+			.hero-email-text {
+				font-size: 1.2rem !important;
 			}
 		}
 	}
