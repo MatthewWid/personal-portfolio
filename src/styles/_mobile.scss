@@ -16,6 +16,15 @@
 		&.about {
 			flex-direction: column;
 			padding: 30px 0;
+
+			.about-section-links {
+				margin-bottom: 2em;
+
+				span {
+					display: block;
+					margin-bottom: .2em;
+				}
+			}
 		}
 		&.project {
 			flex-direction: column;
@@ -25,5 +34,11 @@
 				flex: 1;
 			}
 		}
+	}
+	h1 {
+		font-size: 2.8rem;
+	}
+	h2 {
+		font-size: 1.3rem;
 	}
 }
