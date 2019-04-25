@@ -29,9 +29,26 @@
 		&.project {
 			flex-direction: column !important;
 			align-items: stretch;
+			min-height: unset;
 			
 			& > div:nth-of-type(2) {
 				flex: 1;
+				margin-top: 2em;
+			}
+			.project-section {
+				.info-technology, .info-links {
+					margin-top: 10px !important;
+				}
+				.info-technology {
+					text-align: center;
+
+					ul li {
+						padding: .4rem !important;
+					}
+				}
+				.preview-image {
+					height: 40vh !important;
+				}
 			}
 		}
 	}
