@@ -27,7 +27,7 @@
 			}
 		}
 		&.project {
-			flex-direction: column;
+			flex-direction: column !important;
 			align-items: stretch;
 			
 			& > div:nth-of-type(2) {
