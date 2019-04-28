@@ -57,6 +57,12 @@
 					height: 40vh !important;
 				}
 			}
+			&.bonk-skins .preview-image {
+				box-shadow: inset 0px -60px 30px -20px $bonk-skins-bg;
+			}
+			&.strat-roulette .preview-image {
+				box-shadow: inset 0px -60px 30px -20px $strat-roulette-bg;
+			}
 		}
 		&.contact {
 			flex-direction: column;
