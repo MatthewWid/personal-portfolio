@@ -43,7 +43,7 @@ const initScroll = (evt) => {
 const duration = 250;
 let targetEl, targetScroll, startScroll, startTime;
 // Add event listeners to header logo and navigation items
-document.querySelectorAll("header nav ul li a").forEach((e) => {
+Array.from(document.querySelectorAll("header nav ul li a")).forEach((e) => {
 	e.addEventListener("click", (evt) => {
 		targetEl = document.getElementById(e.href.substring(e.href.indexOf("#") + 1));
 		initScroll(evt);
