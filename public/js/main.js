@@ -52,4 +52,4 @@ Array.from(document.querySelectorAll("header nav ul li a")).forEach((e) => {
 document.querySelector("header h1 a").addEventListener("click", (evt) => {
 	targetEl = document.getElementById("hero");
 	initScroll(evt);
-})
+});
