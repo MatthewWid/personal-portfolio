@@ -56,23 +56,20 @@ section.project {
 					&:hover {
 						text-decoration: underline;
 					}
-					&.repo-link:before {
+					&:before {
 						content: "";
 						display: inline-block;
 						width: 24px;
 						height: 24px;
-						background-image: url("../images/icons/code.svg");
-						background-size: cover;
+						background-size: contain;
+						background-repeat: no-repeat;
 						margin-right: .4em;
 					}
+					&.repo-link:before {
+						background-image: url("../images/icons/code.svg");
+					}
 					&.demo-link:before {
-						content: "";
-						display: inline-block;
-						width: 24px;
-						height: 24px;
 						background-image: url("../images/icons/globe.svg");
-						background-size: cover;
-						margin-right: .4em;
 					}
 				}
 			}
