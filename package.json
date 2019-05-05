@@ -6,9 +6,10 @@
   "scripts": {
     "sass": "node-sass --output-style compressed ./src/styles/ --output ./public/css/",
     "sass:watch": "node-sass --output-style expanded --watch ./src/styles/ --output ./public/css/",
-    "watch": "nodemon ./src/server.js",
-    "start": "node ./src/server.js",
-    "dev": "concurrently \"npm run sass:watch\" \"npm run watch\""
+    "server:watch": "nodemon ./src/server.js",
+    "server": "node ./src/server.js",
+    "start": "npm run server",
+    "dev": "concurrently \"npm run sass:watch\" \"npm run server:watch\""
   },
   "dependencies": {
     "dotenv": "^6.2.0",
