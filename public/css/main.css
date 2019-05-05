@@ -536,6 +536,10 @@ section.contact .contact-email a span {
   html, body {
     overflow-x: hidden;
   }
+  header {
+    background-color: #fdfdfd;
+    z-index: 5;
+  }
   header.mini {
     padding: .4rem 2rem;
   }

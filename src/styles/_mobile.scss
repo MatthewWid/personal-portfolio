@@ -3,6 +3,9 @@
 		overflow-x: hidden;
 	}
 	header {
+		background-color: $bg-white;
+		z-index: 5;
+
 		&.mini {
 			padding: .4rem 2rem;
 		}
