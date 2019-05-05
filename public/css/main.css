@@ -168,6 +168,14 @@ h2 {
   font-size: 1.8rem;
 }
 
+b {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
+}
+
 section.hero {
   background-color: #fdfdfd;
   display: flex;
@@ -353,6 +361,7 @@ section.about .about-section .about-section-links {
 
 section.about .about-section .about-section-links span {
   margin-right: 1rem;
+  font-size: 1.1rem;
 }
 
 section.about .about-section .about-section-links span a {
