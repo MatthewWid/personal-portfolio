@@ -1,12 +1,15 @@
+@media (max-width: 1600px) {
+	header {
+		background-color: $bg-white;
+		border-bottom: 1px solid #999999;
+		z-index: 5;
+	}
+}
 @media (max-width: 950px) {
 	html, body {
 		overflow-x: hidden;
 	}
 	header {
-		background-color: $bg-white;
-		border-bottom: 1px solid $darkest-grey;
-		z-index: 5;
-
 		&.mini {
 			padding: .4rem 2rem;
 		}

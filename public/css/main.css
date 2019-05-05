@@ -548,14 +548,17 @@ section.contact .contact-email a span {
   font-size: 1.4rem;
 }
 
+@media (max-width: 1600px) {
+  header {
+    background-color: #fdfdfd;
+    border-bottom: 1px solid #999999;
+    z-index: 5;
+  }
+}
+
 @media (max-width: 950px) {
   html, body {
     overflow-x: hidden;
-  }
-  header {
-    background-color: #fdfdfd;
-    border-bottom: 1px solid #333;
-    z-index: 5;
   }
   header.mini {
     padding: .4rem 2rem;
