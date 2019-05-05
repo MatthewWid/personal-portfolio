@@ -598,6 +598,9 @@ section.contact .contact-email a span {
   main.content {
     overflow-y: hidden;
   }
+  section.hero {
+    min-height: 95vh;
+  }
   section.hero .hero-inner {
     max-width: 80vw;
   }

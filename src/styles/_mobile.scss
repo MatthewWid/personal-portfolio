@@ -52,11 +52,15 @@
 		overflow-y: hidden;
 	}
 	section {
-		&.hero .hero-inner {
-			max-width: 80vw;
+		&.hero {
+			min-height: 95vh;
+			
+		 .hero-inner {
+				max-width: 80vw;
 
-			h1 {
-				font-size: 3rem;
+				h1 {
+					font-size: 3rem;
+				}
 			}
 		}
 		&.about {
