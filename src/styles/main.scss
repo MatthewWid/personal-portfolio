@@ -1,5 +1,6 @@
 @import "_reset";
 @import "_colours.scss";
+@import "./mixins/_project-preview-fade.scss";
 $line-height: 1.6rem;
 
 @import "_header.scss";

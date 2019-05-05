@@ -81,7 +81,7 @@ section.project {
 		.preview-image {
 			background-image: url("../images/previews/bonkskins-preview.png");
 			background-size: cover;
-			box-shadow: inset -80px 0 60px -30px $bonk-skins-bg;
+			@include project-preview-fade($bonk-skins-bg);
 		}
 	}
 	&.reddit-bot {
@@ -112,7 +112,7 @@ section.project {
 			background-size: cover;
 			width: 100%;
 			height: 100%;
-			box-shadow: inset -80px 0 60px -30px $strat-roulette-bg;
+			@include project-preview-fade($strat-roulette-bg);
 		}
 		.info {
 			max-width: 90%;

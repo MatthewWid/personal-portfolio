@@ -94,10 +94,10 @@
 				}
 			}
 			&.bonk-skins .preview-image {
-				box-shadow: inset 0px -60px 30px -20px $bonk-skins-bg;
+				@include project-preview-fade-mobile($bonk-skins-bg);
 			}
 			&.strat-roulette .preview-image {
-				box-shadow: inset 0px -60px 30px -20px $strat-roulette-bg;
+				@include project-preview-fade-mobile($strat-roulette-bg);
 			}
 		}
 		&.contact {

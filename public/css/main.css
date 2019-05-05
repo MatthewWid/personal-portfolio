@@ -459,7 +459,7 @@ section.project.bonk-skins {
 section.project.bonk-skins .preview-image {
   background-image: url("../images/previews/bonkskins-preview.png");
   background-size: cover;
-  box-shadow: inset -80px 0 60px -30px #1f904c;
+  box-shadow: inset -80px 0 40px -20px #1f904c;
 }
 
 section.project.reddit-bot {
@@ -493,7 +493,7 @@ section.project.strat-roulette .preview-image {
   background-size: cover;
   width: 100%;
   height: 100%;
-  box-shadow: inset -80px 0 60px -30px #14507b;
+  box-shadow: inset -80px 0 40px -20px #14507b;
 }
 
 section.project.strat-roulette .info {

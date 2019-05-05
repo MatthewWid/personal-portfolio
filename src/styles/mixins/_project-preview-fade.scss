@@ -1,0 +1,7 @@
+@mixin project-preview-fade($colour) {
+	box-shadow: inset -80px 0 40px -20px $colour;
+}
+
+@mixin project-preview-fade-mobile($colour) {
+	box-shadow: inset 0px -60px 30px -20px $colour;
+}
