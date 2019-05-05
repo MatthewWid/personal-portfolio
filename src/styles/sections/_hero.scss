@@ -80,6 +80,7 @@ section.hero {
 		height: 36px;
 
 		$border: 4px solid $accompany-grey;
+		cursor: pointer;
 		
 		&:before, &:after {
 			content: "";

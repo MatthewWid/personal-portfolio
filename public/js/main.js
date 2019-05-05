@@ -40,7 +40,7 @@ const initScroll = (evt) => {
 	animateScroll();
 }
 
-const duration = 250;
+const duration = 350;
 let targetEl, targetScroll, startScroll, startTime;
 // Add event listeners to header logo and navigation items
 Array.from(document.querySelectorAll("header nav ul li a")).forEach((e) => {
@@ -51,5 +51,9 @@ Array.from(document.querySelectorAll("header nav ul li a")).forEach((e) => {
 });
 document.querySelector("header h1 a").addEventListener("click", (evt) => {
 	targetEl = document.getElementById("hero");
+	initScroll(evt);
+});
+document.getElementsByClassName("hero-scroll-indicator")[0].addEventListener("click", (evt) => {
+	targetEl = document.getElementById("about-me");
 	initScroll(evt);
 });
