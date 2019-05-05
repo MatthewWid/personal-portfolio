@@ -617,6 +617,9 @@ section.contact .contact-email a span {
     flex-direction: column;
     padding: 30px 0;
   }
+  section.about .about-section p {
+    margin-bottom: 1.6rem;
+  }
   section.about .about-section-links {
     margin-bottom: 2em;
   }
