@@ -4,8 +4,8 @@
   "repository": "git@github.com:MatthewWid/personal-portfolio.git",
   "license": "MIT",
   "scripts": {
-    "sass": "sass --sourcemap=none --style compressed ./src/styles/main.scss:./public/css/main.css",
-    "sass:watch": "sass --sourcemap=none --style expanded --watch ./src/styles/main.scss:./public/css/main.css",
+    "sass": "node-sass --output-style compressed ./src/styles/ --output ./public/css/",
+    "sass:watch": "node-sass --output-style expanded --watch ./src/styles/ --output ./public/css/",
     "watch": "nodemon ./src/server.js",
     "start": "node ./src/server.js",
     "dev": "concurrently \"npm run sass:watch\" \"npm run watch\""
@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
+    "node-sass": "^4.12.0",
     "nodemon": "^1.18.9"
   }
 }
