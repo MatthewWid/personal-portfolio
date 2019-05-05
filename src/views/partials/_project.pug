@@ -4,7 +4,10 @@ mixin project(title, repo, demo)
 			.preview-image
 		.project-section
 			.info
-				h1.info-title= title
+				if repo
+					a.info-title(href=repo title=title target="_blank"): h1= title
+				else
+					h1.info-title= title
 				if block
 					.info-description
 						block

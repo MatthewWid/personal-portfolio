@@ -392,8 +392,14 @@ section.project .project-section .info {
   color: #FCFCFC;
 }
 
-section.project .project-section .info > h1, section.project .project-section .info > div {
+section.project .project-section .info > .info-title, section.project .project-section .info > div {
   margin-bottom: 0.8rem;
+}
+
+section.project .project-section .info a.info-title {
+  display: block;
+  color: #FCFCFC;
+  text-decoration: none;
 }
 
 section.project .project-section .info .info-description {

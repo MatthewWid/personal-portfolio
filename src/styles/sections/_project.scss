@@ -21,8 +21,13 @@ section.project {
 			max-width: 80%;
 			color: $soft-white;
 			
-			> h1, > div {
+			> .info-title, > div {
 				margin-bottom: $line-height / 2;
+			}
+			a.info-title {
+				display: block;
+				color: $soft-white;
+				text-decoration: none;
 			}
 			.info-description {
 				font-size: 1.2rem;
