@@ -25,6 +25,12 @@ section.about {
 			font-size: 1.2rem;
 			line-height: $line-height;
 		}
+		b {
+			background-color: hsla(0, 0%, 30%, 0.2);
+			padding: 0 6px 3px 5px;
+			border-radius: 4px;
+			font-weight: normal;
+		}
 		ul li {
 			line-height: $line-height;
 		}

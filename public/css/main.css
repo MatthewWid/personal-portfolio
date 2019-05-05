@@ -347,6 +347,13 @@ section.about .about-section p {
   line-height: 1.6rem;
 }
 
+section.about .about-section b {
+  background-color: rgba(77, 77, 77, 0.2);
+  padding: 0 6px 3px 5px;
+  border-radius: 4px;
+  font-weight: normal;
+}
+
 section.about .about-section ul li {
   line-height: 1.6rem;
 }
