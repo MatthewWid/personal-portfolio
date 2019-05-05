@@ -64,6 +64,7 @@
 			}
 		}
 		&.about {
+			background: linear-gradient(to top, hsla(3, 90%, 36%, 1), hsla(0, 70%, 50%, 1));
 			flex-direction: column;
 			padding: 30px 0;
 			
@@ -103,11 +104,22 @@
 					height: 40vh !important;
 				}
 			}
-			&.bonk-skins .preview-image {
-				@include project-preview-fade-mobile($bonk-skins-bg);
+			&.bonk-skins {
+				background: linear-gradient(to bottom, $bonk-skins-bg-to 50%, $bonk-skins-bg-from);
+
+				.preview-image {
+					@include project-preview-fade-mobile($bonk-skins-bg-to);
+				}
 			}
-			&.strat-roulette .preview-image {
-				@include project-preview-fade-mobile($strat-roulette-bg);
+			&.reddit-bot {
+				background: linear-gradient(to top, $reddit-bot-bg-from, $reddit-bot-bg-to);
+			}
+			&.strat-roulette {
+				background: linear-gradient(to top, $strat-roulette-bg-from, $strat-roulette-bg-to 50%);
+
+				.preview-image {
+					@include project-preview-fade-mobile($strat-roulette-bg-to);
+				}
 			}
 		}
 		&.contact {

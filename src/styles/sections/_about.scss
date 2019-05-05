@@ -1,6 +1,5 @@
 section.about {
-	// background-color: rgb(194, 63, 56);
-	background-color: rgb(216, 65, 56);
+	background: linear-gradient(to bottom left, hsla(3, 100%, 36%, 1), hsl(0, 90%, 30%));
 	color: $soft-white;
 	min-height: 800px;
 	display: flex;

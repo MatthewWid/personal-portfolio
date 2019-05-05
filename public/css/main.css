@@ -317,7 +317,7 @@ section.hero .hero-scroll-indicator:after {
 }
 
 section.about {
-  background-color: #d84138;
+  background: linear-gradient(to bottom left, #b80900, #910808);
   color: #FCFCFC;
   min-height: 800px;
   display: flex;
@@ -414,7 +414,7 @@ section.project .project-section .info > .info-title, section.project .project-s
 
 section.project .project-section .info a.info-title {
   display: block;
-  color: #FCFCFC;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -441,7 +441,7 @@ section.project .project-section .info .info-links {
 section.project .project-section .info .info-links .info-link {
   display: flex;
   align-items: center;
-  color: #FCFCFC;
+  color: inherit;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   padding: 10px;
@@ -475,7 +475,7 @@ section.project .project-section .info .info-links .info-link.demo-link:before {
 }
 
 section.project.bonk-skins {
-  background-color: #1f904c;
+  background: linear-gradient(to left, #285d3c, #1f904c 50%);
 }
 
 section.project.bonk-skins .preview-image {
@@ -485,7 +485,7 @@ section.project.bonk-skins .preview-image {
 }
 
 section.project.reddit-bot {
-  background-color: #323232;
+  background: linear-gradient(to right, #1f1f1f, #3d3d3d);
 }
 
 section.project.reddit-bot h1.info-title {
@@ -507,7 +507,7 @@ section.project.reddit-bot .preview-image {
 }
 
 section.project.strat-roulette {
-  background-color: #14507b;
+  background: linear-gradient(to left, #14507b, #2078b6 50%);
 }
 
 section.project.strat-roulette .preview-image {
@@ -515,7 +515,7 @@ section.project.strat-roulette .preview-image {
   background-size: cover;
   width: 100%;
   height: 100%;
-  box-shadow: inset -80px 0 40px -20px #14507b;
+  box-shadow: inset -80px 0 40px -20px #2078b6;
 }
 
 section.project.strat-roulette .info {
@@ -523,7 +523,7 @@ section.project.strat-roulette .info {
 }
 
 section.project.game-engine {
-  background-color: #ca6a8a;
+  background: linear-gradient(to right, grey, #CCC);
 }
 
 section.project.game-engine .preview-image {
@@ -630,6 +630,7 @@ section.contact .contact-email a span {
     font-size: 3rem;
   }
   section.about {
+    background: linear-gradient(to top, #ae1109, #d92626);
     flex-direction: column;
     padding: 30px 0;
   }
@@ -664,11 +665,20 @@ section.contact .contact-email a span {
   section.project .project-section .preview-image {
     height: 40vh !important;
   }
+  section.project.bonk-skins {
+    background: linear-gradient(to bottom, #1f904c 50%, #285d3c);
+  }
   section.project.bonk-skins .preview-image {
     box-shadow: inset 0px -60px 30px -20px #1f904c;
   }
+  section.project.reddit-bot {
+    background: linear-gradient(to top, #1f1f1f, #3d3d3d);
+  }
+  section.project.strat-roulette {
+    background: linear-gradient(to top, #14507b, #2078b6 50%);
+  }
   section.project.strat-roulette .preview-image {
-    box-shadow: inset 0px -60px 30px -20px #14507b;
+    box-shadow: inset 0px -60px 30px -20px #2078b6;
   }
   section.contact {
     flex-direction: column;
