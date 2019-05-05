@@ -24,6 +24,11 @@ header {
 	&.mini {
 		padding: .6rem 2rem;
 	}
+	a {
+		color: inherit;
+		text-decoration: none;
+		display: block;
+	}
 	h1 {
 		font-family: "Montserrat", sans-serif;
 		font-size: 2rem;
@@ -35,10 +40,17 @@ header {
 			color: $primary-eye;
 		}
 	}
-	a {
-		color: inherit;
-		text-decoration: none;
-		display: block;
+	.button-hamburger {
+		background: none;
+		border: none;
+		padding: 0;
+		outline: 0;
+		// Disable for desktop layout
+		display: none;
+
+		img {
+			width: 32px;
+		}
 	}
 	nav ul {
 		list-style: none;

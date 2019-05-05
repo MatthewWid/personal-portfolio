@@ -4,18 +4,45 @@
 	}
 	header {
 		background-color: $bg-white;
+		border-bottom: 1px solid $darkest-grey;
 		z-index: 5;
 
 		&.mini {
 			padding: .4rem 2rem;
 		}
-		nav ul li {
+		.button-hamburger {
 			display: block;
-			text-align: center;
-
-			a {
-				padding: .2rem;
+		}
+		nav {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 2px;
+			transform: translateY(100%);
+			background-color: $bg-white;
+			// Hide when hamburger menu is not open
+			display: none;
+			
+			&:after {
+				content: "";
+				background-color: rgba(40, 40, 40, .8);
+				position: absolute;
+				top: 100%;
+				width: 100vw;
+				height: 100vh;
 			}
+			ul li {
+				display: block;
+				text-align: right;
+				font-size: 1.2rem;
+				border-bottom: 1px solid $border-grey;
+				a {
+					padding: 1rem 1rem;
+				}
+			}
+		}
+		.button-hamburger:hover + nav, nav:active {
+			display: block;
 		}
 	}
 	main.content {

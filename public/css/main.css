@@ -80,6 +80,12 @@ header.mini {
   padding: .6rem 2rem;
 }
 
+header a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
 header h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
@@ -92,10 +98,16 @@ header h1 span {
   color: #e93434;
 }
 
-header a {
-  color: inherit;
-  text-decoration: none;
-  display: block;
+header .button-hamburger {
+  background: none;
+  border: none;
+  padding: 0;
+  outline: 0;
+  display: none;
+}
+
+header .button-hamburger img {
+  width: 32px;
 }
 
 header nav ul {
@@ -538,17 +550,43 @@ section.contact .contact-email a span {
   }
   header {
     background-color: #fdfdfd;
+    border-bottom: 1px solid #333;
     z-index: 5;
   }
   header.mini {
     padding: .4rem 2rem;
   }
+  header .button-hamburger {
+    display: block;
+  }
+  header nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    transform: translateY(100%);
+    background-color: #fdfdfd;
+    display: none;
+  }
+  header nav:after {
+    content: "";
+    background-color: rgba(40, 40, 40, 0.8);
+    position: absolute;
+    top: 100%;
+    width: 100vw;
+    height: 100vh;
+  }
   header nav ul li {
     display: block;
-    text-align: center;
+    text-align: right;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #B3B3B3;
   }
   header nav ul li a {
-    padding: .2rem;
+    padding: 1rem 1rem;
+  }
+  header .button-hamburger:hover + nav, header nav:active {
+    display: block;
   }
   main.content {
     overflow-y: hidden;
