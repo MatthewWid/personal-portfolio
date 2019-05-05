@@ -193,7 +193,7 @@ section.hero .hero-inner h1 {
   color: #333;
   font-size: 5rem;
   margin-left: -6px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 section.hero .hero-inner .links {
@@ -327,7 +327,7 @@ section.about .about-section .about-section-inner {
 }
 
 section.about .about-section h1 {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
 }
 
 section.about .about-section h2 {
@@ -336,15 +336,19 @@ section.about .about-section h2 {
 
 section.about .about-section p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  line-height: 1.6rem;
 }
 
 section.about .about-section ul li {
-  margin-bottom: 1em;
+  line-height: 1.6rem;
 }
 
 section.about .about-section h1, section.about .about-section h2, section.about .about-section p, section.about .about-section ul, section.about .about-section .about-section-links {
   text-align: center;
+}
+
+section.about .about-section .about-section-links {
+  margin: 1.6rem;
 }
 
 section.about .about-section .about-section-links span {
@@ -389,12 +393,12 @@ section.project .project-section .info {
 }
 
 section.project .project-section .info > h1, section.project .project-section .info > div {
-  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
 }
 
 section.project .project-section .info .info-description {
   font-size: 1.2rem;
-  line-height: 1.3em;
+  line-height: 1.6rem;
 }
 
 section.project .project-section .info .info-technology ul li {

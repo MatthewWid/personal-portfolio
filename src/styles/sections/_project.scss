@@ -22,11 +22,11 @@ section.project {
 			color: $soft-white;
 			
 			> h1, > div {
-				margin-bottom: 8px;
+				margin-bottom: $line-height / 2;
 			}
 			.info-description {
 				font-size: 1.2rem;
-				line-height: 1.3em;
+				line-height: $line-height;
 			}
 			.info-technology ul li {
 				display: inline-block;

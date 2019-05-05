@@ -16,26 +16,30 @@ section.about {
 			width: 90%;
 		}
 		h1 {
-			margin-bottom: 1.2rem;
+			margin-bottom: $line-height;
 		}
 		h2 {
 			margin-bottom: .6rem;
 		}
 		p {
 			font-size: 1.2rem;
-			margin-bottom: 2rem;
+			line-height: $line-height;
 		}
 		ul li {
-			margin-bottom: 1em;
+			line-height: $line-height;
 		}
 		h1, h2, p, ul, .about-section-links {
 			text-align: center;
 		}
-		.about-section-links span {
-			margin-right: 1rem;
+		.about-section-links {
+			margin: $line-height;
 
-			a {
-				color: inherit;
+			span {
+				margin-right: 1rem;
+
+				a {
+					color: inherit;
+				}
 			}
 		}
 		.skills-tables {
