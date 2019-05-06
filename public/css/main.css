@@ -367,12 +367,20 @@ section.about .about-section .about-section-links {
 }
 
 section.about .about-section .about-section-links span {
+  display: inline-block;
   margin-right: 1rem;
   font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: .4px;
+}
+
+section.about .about-section .about-section-links span.links-spacer {
+  transform: translateY(-1px);
 }
 
 section.about .about-section .about-section-links span a {
   color: inherit;
+  text-decoration: none;
 }
 
 section.about .about-section .skills-tables {
@@ -475,7 +483,7 @@ section.project .project-section .info .info-links .info-link.demo-link:before {
 }
 
 section.project.bonk-skins {
-  background: linear-gradient(to left, #285d3c, #1f904c 50%);
+  background: linear-gradient(to left, #255637, #1f904c 50%);
 }
 
 section.project.bonk-skins .preview-image {
@@ -485,7 +493,7 @@ section.project.bonk-skins .preview-image {
 }
 
 section.project.reddit-bot {
-  background: linear-gradient(to right, #1f1f1f, #3d3d3d);
+  background: linear-gradient(to right, #1f1f1f, #424242);
 }
 
 section.project.reddit-bot h1.info-title {
@@ -523,7 +531,7 @@ section.project.strat-roulette .info {
 }
 
 section.project.game-engine {
-  background: linear-gradient(to right, grey, #CCC);
+  background: linear-gradient(to right, #575757, #d6d6d6);
 }
 
 section.project.game-engine .preview-image {
@@ -666,13 +674,13 @@ section.contact .contact-email a span {
     height: 40vh !important;
   }
   section.project.bonk-skins {
-    background: linear-gradient(to bottom, #1f904c 50%, #285d3c);
+    background: linear-gradient(to bottom, #1f904c 50%, #255637);
   }
   section.project.bonk-skins .preview-image {
     box-shadow: inset 0px -60px 30px -20px #1f904c;
   }
   section.project.reddit-bot {
-    background: linear-gradient(to top, #1f1f1f, #3d3d3d);
+    background: linear-gradient(to top, #1f1f1f, #424242);
   }
   section.project.strat-roulette {
     background: linear-gradient(to top, #14507b, #2078b6 50%);
