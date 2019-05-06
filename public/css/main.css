@@ -646,11 +646,13 @@ section.contact .contact-email a span {
     margin-bottom: 1.6rem;
   }
   section.about .about-section-links {
-    margin-bottom: 2em;
+    line-height: 1.6rem;
   }
   section.about .about-section-links span {
-    display: block;
-    margin-bottom: .2em;
+    display: block !important;
+  }
+  section.about .about-section-links span.links-spacer {
+    display: none !important;
   }
   section.project {
     flex-direction: column !important;
@@ -687,6 +689,9 @@ section.contact .contact-email a span {
   }
   section.project.strat-roulette .preview-image {
     box-shadow: inset 0px -60px 30px -20px #2078b6;
+  }
+  section.project.game-engine {
+    background: linear-gradient(to top, #575757, #d6d6d6);
   }
   section.contact {
     flex-direction: column;

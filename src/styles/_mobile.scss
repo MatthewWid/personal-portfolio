@@ -72,11 +72,15 @@
 				margin-bottom: $line-height;
 			}
 			.about-section-links {
-				margin-bottom: 2em;
+				// margin-bottom: 2em;
+				line-height: $line-height;
 
 				span {
-					display: block;
-					margin-bottom: .2em;
+					display: block !important;
+
+					&.links-spacer {
+						display: none !important;
+					}
 				}
 			}
 		}
@@ -120,6 +124,9 @@
 				.preview-image {
 					@include project-preview-fade-mobile($strat-roulette-bg-to);
 				}
+			}
+			&.game-engine {
+				background: linear-gradient(to top, $game-engine-bg-from, $game-engine-bg-to);
 			}
 		}
 		&.contact {
