@@ -18,11 +18,13 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.6rem 2rem;
-	transition: padding .1s ease;
 	background-color: $bg-white;
 	
 	&.mini {
 		padding: .6rem 2rem;
+	}
+	&.transition {
+		transition: padding .1s ease;
 	}
 	a {
 		color: inherit;

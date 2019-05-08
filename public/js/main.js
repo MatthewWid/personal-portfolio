@@ -1,12 +1,26 @@
 let targetScroll, startScroll, startTime;
 const duration = 350;
-const hero = document.getElementsByClassName("hero")[0];
 const header = document.getElementsByTagName("header")[0];
+let headerBig, headerMini;
+
+window.addEventListener("resize", getHeaderSizes);
 window.addEventListener("scroll", checkScroll);
-checkScroll();
+
+getHeaderSizes();
+
+function getHeaderSizes() {
+	header.classList.remove(...["mini", "transition"]);
+	headerBig = header.offsetHeight;
+	header.classList.add("mini");
+	headerMini = header.offsetHeight;
+	header.classList.remove("mini");
+	header.classList.add("transition");
+
+	checkScroll();
+}
 
 function checkScroll() {
-	const minAt = (hero.offsetTop + hero.offsetHeight) - header.offsetHeight;
+	const minAt = (hero.offsetTop + hero.offsetHeight) - headerBig;
 	header.classList[window.scrollY > minAt ? "add" : "remove"]("mini");
 }
 
@@ -18,7 +32,7 @@ function animateScroll() {
 	if (timeThrough != 1) {
 		requestAnimationFrame(animateScroll);
 	} else {
-		history.pushState({}, "", `#${targetEl["id"]}`);
+		history.pushState({}, "", targetEl["id"] === "hero" ? "#" : `#${targetEl["id"]}`);
 	}
 }
 
@@ -32,7 +46,7 @@ function animateScroll() {
 		targetEl = document.getElementById(evt.currentTarget.dataset["scroll"]);
 		startScroll = window.scrollY;
 		startTime = performance.now();
-		targetScroll = targetEl.offsetTop - header.offsetHeight;
+		targetScroll = targetEl.offsetTop - (targetEl["id"] === "about-me" ? headerBig : headerMini);
 
 		animateScroll();
 	});
