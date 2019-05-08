@@ -1,5 +1,5 @@
 mixin hero
-	section.hero
+	section.hero#hero
 		.hero-inner
 			p Hi, I'm
 			h1 Matthew Widdicombe
@@ -12,4 +12,4 @@ mixin hero
 					.hero-email
 						a(href="mailto:matthew.widdi@gmail.com" title="Email me"): img(src="./images/icons/email.svg" alt="Email Icon")
 						.hero-email-text matthew.widdi@gmail.com
-		.hero-scroll-indicator
+		.hero-scroll-indicator(data-scroll="about-me")

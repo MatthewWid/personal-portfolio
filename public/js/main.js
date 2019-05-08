@@ -1,7 +1,6 @@
 // Alter header size when scrolling past hero section
 function checkScroll() {
-	const heroEl = document.querySelector("section.hero");
-	const minAt = heroEl.offsetTop + heroEl.offsetHeight - headerHeight;
+	const minAt = (hero.offsetTop + hero.offsetHeight) - header.offsetHeight;
 	if (window.scrollY > minAt) {
 		header.classList.add("mini");
 	} else {
@@ -9,10 +8,9 @@ function checkScroll() {
 	}
 }
 
+const hero = document.getElementsByClassName("hero")[0];
 const header = document.getElementsByTagName("header")[0];
-const headerHeight = header.offsetHeight;
 window.addEventListener("scroll", checkScroll);
-
 checkScroll();
 
 // Smooth scroll when clicking header anchor links
@@ -24,36 +22,27 @@ function animateScroll() {
 	if (timeThrough != 1) {
 		requestAnimationFrame(animateScroll);
 	} else {
-		location.hash = targetEl.id.substring(targetEl.id.indexOf("#") + 1);
-		if (location.hash == "#hero") {
-			location.hash = "";
-		}
+		history.pushState({}, "", `#${targetEl["id"]}`);
 	}
 }
-const initScroll = (evt) => {
-	evt.preventDefault();
-
-	startScroll = window.scrollY;
-	startTime = performance.now();
-	targetScroll = targetEl.offsetTop;
+const initScroll = (targetEl) => {
+	startScroll = window.scrollY; // starting scroll position
+	startTime = performance.now(); // current time
+	targetScroll = targetEl.offsetTop - header.offsetHeight; // ending scroll position
 
 	animateScroll();
 }
 
 const duration = 350;
-let targetEl, targetScroll, startScroll, startTime;
-// Add event listeners to header logo and navigation items
-Array.from(document.querySelectorAll("header nav ul li a")).forEach((e) => {
+let targetScroll, startScroll, startTime;
+[
+	...Array.from(document.querySelectorAll("header nav ul li a")),
+	document.querySelector("header h1 a"),
+	document.getElementsByClassName("hero-scroll-indicator")[0]
+].forEach((e) => {
 	e.addEventListener("click", (evt) => {
-		targetEl = document.getElementById(e.href.substring(e.href.indexOf("#") + 1));
-		initScroll(evt);
+		evt.preventDefault();
+		targetEl = document.getElementById(evt.currentTarget.dataset["scroll"]);
+		initScroll(targetEl);
 	});
-});
-document.querySelector("header h1 a").addEventListener("click", (evt) => {
-	targetEl = document.getElementById("hero");
-	initScroll(evt);
-});
-document.getElementsByClassName("hero-scroll-indicator")[0].addEventListener("click", (evt) => {
-	targetEl = document.getElementById("about-me");
-	initScroll(evt);
 });

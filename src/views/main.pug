@@ -9,33 +9,30 @@ block head
 	link(rel="stylesheet" href="./css/main.css")
 
 block content
-	.anchor#hero
 	+hero
 	
 	//- Every large section gets an additional anchor div to link to from the nav bar
-	.anchor#about-me
 	+about
 
-	.anchor#projects
-	- let tech;
-	//- Each project is generated from the _project.pug mixin
-	//- Takes a project name, a source code link (Optional) and a demo link (Optional)
-	//- Also requires a block of content to serve as the description for the project
-	//- Project technology is defined in a PUGJS array `tech` that the mixin uses, so change before each mixin is utilised
-	- tech = ["PHP", "MySQL", "JavaScript", "SASS"];
-	+project("Bonk Skins", "https://github.com/MatthewWid/bonk-skins.io", "http://bonk-skins.herokuapp.com")(class="bonk-skins", tech)
-		p Public forum of game avatars that allows users to create their own avatars with a rich interactive user interface and then download and share their creations to the front page.
-	- tech = ["Node.js", "MongoDB"];
-	+project("Reddit Moderation Bot", "https://github.com/MatthewWid/needamod-bot", "https://www.reddit.com/user/needamod-bot")(class="reddit-bot")
-		p Automated bot for tagging, analysing and moderating forum posts, managing user information and storing post information for statistical analysis.
-	- tech = ["PHP", "MySQL", "JavaScript"];
-	+project("Game Strategy Generator", "https://github.com/MatthewWid/OW-StratRoulette")(class="strat-roulette")
-		p Generate game strategies from a central database of game plans that users can contribute to and read from.
-	- tech = ["Node.js", "JavaScript", "Browserify"];
-	+project("Browser Game Engine", "https://github.com/MatthewWid/Whirl")(class="game-engine")
-		p Canvas-based browser game engine that handles rendering, game states, user input and object management on-top of a custom event system.
+	#projects
+		- let tech;
+		//- Each project is generated from the _project.pug mixin
+		//- Takes a project name, a source code link (Optional) and a demo link (Optional)
+		//- Also requires a block of content to serve as the description for the project
+		//- Project technology is defined in a PUGJS array `tech` that the mixin uses, so change before each mixin is utilised
+		- tech = ["PHP", "MySQL", "JavaScript", "SASS"];
+		+project("Bonk Skins", "https://github.com/MatthewWid/bonk-skins.io", "http://bonk-skins.herokuapp.com")(class="bonk-skins", tech)
+			p Public forum of game avatars that allows users to create their own avatars with a rich interactive user interface and then download and share their creations to the front page.
+		- tech = ["Node.js", "MongoDB"];
+		+project("Reddit Moderation Bot", "https://github.com/MatthewWid/needamod-bot", "https://www.reddit.com/user/needamod-bot")(class="reddit-bot")
+			p Automated bot for tagging, analysing and moderating forum posts, managing user information and storing post information for statistical analysis.
+		- tech = ["PHP", "MySQL", "JavaScript"];
+		+project("Game Strategy Generator", "https://github.com/MatthewWid/OW-StratRoulette")(class="strat-roulette")
+			p Generate game strategies from a central database of game plans that users can contribute to and read from.
+		- tech = ["Node.js", "JavaScript", "Browserify"];
+		+project("Browser Game Engine", "https://github.com/MatthewWid/Whirl")(class="game-engine")
+			p Canvas-based browser game engine that handles rendering, game states, user input and object management on-top of a custom event system.
 	
-	.anchor#contact
 	+contact
 
 	script(src="./js/main.js")
