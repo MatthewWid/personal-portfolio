@@ -620,7 +620,7 @@ section.contact .contact-email a span {
     text-align: right;
     background-color: #fdfdfd;
     font-size: 1.2rem;
-    border-bottom: 1px solid #B3B3B3;
+    border-bottom: 1px solid #999999;
     opacity: 0;
     z-index: 1;
   }
@@ -654,7 +654,7 @@ section.contact .contact-email a span {
     }
     to {
       opacity: 1;
-      bottom: 1%;
+      bottom: -1px;
       pointer-events: auto;
     }
   }
