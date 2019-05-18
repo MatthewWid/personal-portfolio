@@ -485,6 +485,10 @@ section.project .project-section .info .info-links .info-link.demo-link:before {
   background-image: url("../images/icons/globe.svg");
 }
 
+section.project .project-section .info .info-links .info-link.doc-link:before {
+  background-image: url("../images/icons/document.svg");
+}
+
 section.project.bonk-skins {
   background: linear-gradient(to left, #255637, #1f904c 50%);
 }

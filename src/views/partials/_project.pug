@@ -1,4 +1,4 @@
-mixin project(title, repo, demo)
+mixin project(title, repo, demo, doc)
 	section.project(class!=attributes.class)
 		.project-section
 			.preview-image
@@ -23,3 +23,5 @@ mixin project(title, repo, demo)
 						a.info-link.repo-link(href=repo title=`${title} source code` target="_blank") #[span source code]
 					if demo
 						a.info-link.demo-link(href=demo title=`${title} live demo` target="_blank") #[span live demo]
+					if doc
+						a.info-link.doc-link(href=doc title=`${title} documentation` target="_blank") #[span documentation]

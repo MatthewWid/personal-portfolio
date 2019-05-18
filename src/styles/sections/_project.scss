@@ -76,6 +76,9 @@ section.project {
 					&.demo-link:before {
 						background-image: url("../images/icons/globe.svg");
 					}
+					&.doc-link:before {
+						background-image: url("../images/icons/document.svg");
+					}
 				}
 			}
 		}
