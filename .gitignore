@@ -5,4 +5,5 @@ node_modules/
 
 # public/css/*.css
 .sass-cache
+public/css/*.css
 public/css/*.css.map
