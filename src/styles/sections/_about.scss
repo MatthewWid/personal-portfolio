@@ -1,4 +1,5 @@
 section.about {
+	background-color: $bg-white;
 	min-height: 80vh;
 	display: flex;
 	color: $darkest-grey;
@@ -23,9 +24,29 @@ section.about {
 		p {
 			font-size: 1.2rem;
 			line-height: $line-height;
+			z-index: 1;
 		}
 		b {
+			display: inline-block;
+			position: relative;
 			padding: 0 6px 3px 5px;
+			font-weight: normal;
+			z-index: 1;
+
+			&:after {
+				position: absolute;
+				bottom: 1px;
+				left: -5%;
+				width: 110%;
+				height: 2px;
+
+				z-index: -1;
+
+				content: "";
+				background:
+					radial-gradient(circle, rgba(253,253,253,0) 80%, rgba(255,255,255,1) 100%),
+					linear-gradient(90deg, rgba(255,12,121,0) 0%, rgba(255,12,121,1) 10%, rgba(0,212,255,1) 90%, rgba(0,212,255,0) 100%);
+			}
 		}
 		ul li {
 			font-weight: bold;
