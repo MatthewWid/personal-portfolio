@@ -1,8 +1,8 @@
 section.about {
-	background: linear-gradient(to bottom left, $about-bg-from, $about-bg-to);
-	color: $soft-white;
-	min-height: 800px;
+	min-height: 80vh;
 	display: flex;
+	color: $darkest-grey;
+	border-top: 1px solid $border-grey;
 
 	.about-section {
 		flex: 1;
@@ -25,12 +25,10 @@ section.about {
 			line-height: $line-height;
 		}
 		b {
-			background-color: hsla(0, 0%, 30%, 0.2);
 			padding: 0 6px 3px 5px;
-			border-radius: 4px;
-			font-weight: normal;
 		}
 		ul li {
+			font-weight: bold;
 			line-height: $line-height;
 		}
 		h1, h2, p, ul, .about-section-links {
