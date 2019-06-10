@@ -1,11 +1,9 @@
 section.about {
-	background-color: $bg-white;
 	min-height: 80vh;
 	display: flex;
 	flex-direction: column;
-
+	background-color: $bg-white;
 	color: $darkest-grey;
-	margin-bottom: 10vh;
 
 	.about-section {
 		flex: 1;
@@ -13,7 +11,7 @@ section.about {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 10vh;
+		margin: 10vh 0;
 		
 		.about-section-inner {
 			width: 90%;
