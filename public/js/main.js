@@ -46,7 +46,7 @@ function animateScroll() {
 		targetEl = document.getElementById(evt.currentTarget.dataset["scroll"]);
 		startScroll = window.scrollY;
 		startTime = performance.now();
-		targetScroll = targetEl.offsetTop - (targetEl["id"] === "about-me" ? headerBig : headerMini);
+		targetScroll = targetEl.offsetTop - (targetEl["id"] === "about-me" ? 0 : headerMini);
 
 		animateScroll();
 	});
