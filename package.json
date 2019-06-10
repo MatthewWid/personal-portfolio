@@ -1,7 +1,7 @@
 {
   "name": "personal-portfolio",
   "version": "1.0.0",
-  "repository": "git@github.com:MatthewWid/personal-portfolio.git",
+  "repository": "git@github.com:MatthewWid/mwidd.com.git",
   "license": "MIT",
   "scripts": {
     "sass": "node-sass --output-style compressed ./src/styles/ --output ./public/css/",
