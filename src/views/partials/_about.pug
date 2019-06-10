@@ -1,3 +1,5 @@
+include ./_tech.pug
+
 mixin about
 	section.about#about-me
 		.about-section
@@ -21,32 +23,22 @@ mixin about
 						a(href="/github" target="_blank") GitHub
 		.about-section
 			.about-section-inner
-				h1 💪 Skills
-				.skills-tables
-					.skills-table
-						h2 Front-End
-						ul
-							li React
-							li JavaScript
-							li CSS
-							li SASS
-							li HTML
-							li Pug
-					.skills-table
-						h2 Back-End
-						ul
-							li NodeJS
-							li Express
-							li PHP
-							li MySQL
-							li SQLite
-							li MongoDB
-					.skills-table
-						h2 Tooling
-						ul
-							li Yarn
-							li npm
-							li Webpack
-							li Babel
-							li Git
-							li phpMyAdmin
+				h1 💪 My Skills
+				.tech-list
+					//- a.tech(href="https://reactjs.org/" title="ReactJS" target="_blank"): img(src="./images/tech/react.svg" alt="React Logo")
+					+tech("ReactJS", "https://reactjs.org/", "react.svg")
+					+tech("NodeJS", "https://nodejs.org/", "node.png")
+					+tech("SASS / SCSS", "https://sass-lang.com/", "sass.png")
+					+tech("PugJS", "https://pugjs.org/", "pug.svg")
+					+tech("MongoDB", "https://www.mongodb.com/", "mongodb.svg")
+					+tech("Mongoose", "https://mongoosejs.com/", "mongoose.png")
+					+tech("PHP", "https://php.net/", "php.svg")
+					+tech("SocketIO", "https://socket.io/", "socket-io.svg")
+					+tech("MySQL", "https://www.mysql.com/", "mysql.svg")
+					+tech("SQLite", "https://www.sqlite.org/", "sqlite.svg")
+					+tech("webpack", "https://webpack.js.org/", "webpack.svg")
+					+tech("Babel", "https://babeljs.io/", "babel.svg")
+					+tech("Yarn", "https://yarnpkg.com/", "yarn.svg")
+					+tech("npm", "https://www.npmjs.com/", "npm.svg")
+					+tech("GitHub", "https://github.com/", "github.svg")
+					+tech("Git", "https://git-scm.com/", "git.svg")

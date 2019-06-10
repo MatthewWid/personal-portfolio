@@ -102,14 +102,16 @@
 			flex-direction: column;
 			padding: 30px 0;
 			
+			& > div:last-of-type {
+				margin-bottom: 0 !important;
+			}
 			.about-section {
-				margin-bottom: 15vh;
+				margin: 5vh 0 !important;
 			}
 			.about-section p {
 				margin-bottom: $line-height;
 			}
 			.about-section-links {
-				// margin-bottom: 2em;
 				line-height: $line-height;
 
 				span {
@@ -118,6 +120,14 @@
 					&.links-spacer {
 						display: none !important;
 					}
+				}
+			}
+			.tech-list {
+				max-width: 100% !important;
+
+				.tech img {
+					max-width: 80px !important;
+					padding: 20px 10px !important;
 				}
 			}
 		}
