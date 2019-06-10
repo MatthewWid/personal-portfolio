@@ -22,6 +22,10 @@ header {
 	
 	&.mini {
 		padding: .6rem 2rem;
+
+		nav ul li a:after {
+			top: 90%;
+		}
 	}
 	&.transition {
 		transition: padding .1s ease;
