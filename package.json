@@ -12,6 +12,7 @@
     "dev": "npm-run-all sass --parallel **:watch"
   },
   "dependencies": {
+    "compression": "^1.7.4",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "node-sass": "4.12.0",

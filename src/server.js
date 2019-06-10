@@ -5,12 +5,16 @@ require("dotenv").config({
 const path = require("path");
 const express = require("express");
 const serve_favicon = require("serve-favicon");
+const compression = require("compression");
 const app = express();
 const routes = require("./routes/index");
 
 // View engine
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "/views"));
+
+// g-zip
+app.use(compression());
 
 // Static files
 app.use(express.static(path.join(__dirname, "../public")));
