@@ -53,13 +53,26 @@ section.project {
 					text-decoration: none;
 					font-family: "Roboto", sans-serif;
 					padding: 10px;
-					font-size: 1.4rem;
+					font-size: 1.2rem;
 					
 					span {
+						position: relative;
 						margin-top: -2%;
-					}
-					&:hover {
-						text-decoration: underline;
+
+
+						&:after {
+							content: "";
+							position: absolute;
+							left: 0;
+							top: 100%;
+							width: 0%;
+							height: 1px;
+							background-color: $soft-white;
+							transition: width .1s ease-out;
+						}
+						&:hover:after {
+							width: 100%;
+						}
 					}
 					&:before {
 						content: "";
