@@ -82,17 +82,39 @@ section.about {
 			margin: 0 auto;
 			text-align: center;
 
-			.tech img {
-				max-width: 200px;
-				max-height: 120px;
-				padding: 20px;
+			.tech {
+				position: relative;
+				color: $accompany-grey;
+				text-decoration: none;
+				
+				&:hover:after {
+					top: 100%;
+					opacity: 1;
+				}
+				&:after {
+					content: attr(title);
+					font-weight: bold;
 
-				filter: grayscale(80%);
-				transition: filter .1s ease, transform .1s ease-out;
+					transform: translate(-50%, -50%);
+					position: absolute;
+					top: 50%;
+					left: 50%;
 
-				&:hover {
-					transform: scale(1.05);
-					filter: grayscale(0%);
+					transition: top .2s ease, opacity .2s ease;
+					opacity: 0;
+				}
+				img {
+					max-width: 200px;
+					max-height: 120px;
+					padding: 20px;
+
+					filter: grayscale(50%);
+					transition: filter .1s ease, transform .1s ease-out;
+
+					&:hover {
+						transform: scale(1.05);
+						filter: grayscale(0%);
+					}
 				}
 			}
 		}
