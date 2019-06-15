@@ -26,6 +26,12 @@ section.about {
 			font-size: 1.2rem;
 			line-height: $line-height;
 			z-index: 1;
+
+			img.marker-icon {
+				width: 14px;
+				transform: translateY(2px);
+				margin: 0 .1em;
+			}
 		}
 		b {
 			display: inline-block;
