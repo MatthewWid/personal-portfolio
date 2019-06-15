@@ -26,6 +26,7 @@ section.about {
 			font-size: 1.2rem;
 			line-height: $line-height;
 			z-index: 1;
+			margin-bottom: $line-height - .4rem;
 
 			img.marker-icon {
 				width: 14px;
@@ -42,7 +43,7 @@ section.about {
 
 			&:after {
 				position: absolute;
-				bottom: 1px;
+				bottom: 0;
 				left: -5%;
 				width: 110%;
 				height: 2px;
