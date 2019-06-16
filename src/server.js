@@ -7,7 +7,7 @@ const express = require("express");
 const serve_favicon = require("serve-favicon");
 const compression = require("compression");
 const app = express();
-const routes = require("./routes/index");
+const routes = require("./routes");
 
 // View engine
 app.set("view engine", "pug");
