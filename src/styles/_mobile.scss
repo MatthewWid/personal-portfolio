@@ -54,7 +54,7 @@
 			li {
 				animation: openIn .2s ease forwards;
 			}
-			@for $i from 1 to 5 {
+			@for $i from 1 to 4 {
 			  li:nth-child(#{$i}) {
 			  	animation-delay: $i * .1s;
 			  }
