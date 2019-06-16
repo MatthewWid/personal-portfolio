@@ -4,12 +4,15 @@
 const header = document.getElementsByTagName("header")[0];
 let headerBig, headerMini;
 function getHeaderSizes() {
-	header.classList.remove(...["mini", "transition"]);
+	header.classList.add("no-transition");
+
+	header.classList.remove("mini");
 	headerBig = header.offsetHeight;
 	header.classList.add("mini");
 	headerMini = header.offsetHeight;
 	header.classList.remove("mini");
-	header.classList.add("transition");
+
+	header.classList.remove("no-transition");
 
 	checkScroll();
 }

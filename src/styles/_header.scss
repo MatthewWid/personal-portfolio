@@ -27,7 +27,7 @@ header {
 			top: 90%;
 		}
 	}
-	&.transition {
+	&:not(.no-transition) {
 		transition: padding .1s ease;
 	}
 	a {
