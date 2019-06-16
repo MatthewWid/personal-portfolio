@@ -1,13 +1,8 @@
-let targetScroll, startScroll, startTime;
-const duration = 350;
+/*
+	Get the pixel height of the default and minimised header.
+*/
 const header = document.getElementsByTagName("header")[0];
 let headerBig, headerMini;
-
-window.addEventListener("resize", getHeaderSizes);
-window.addEventListener("scroll", checkScroll);
-
-getHeaderSizes();
-
 function getHeaderSizes() {
 	header.classList.remove(...["mini", "transition"]);
 	headerBig = header.offsetHeight;
@@ -18,12 +13,24 @@ function getHeaderSizes() {
 
 	checkScroll();
 }
+// When the window resizes recalculate the new header sizes.
+window.addEventListener("resize", getHeaderSizes);
+// Calculate the header sizes on initial load.
+getHeaderSizes();
 
+/*
+	Check if the user has scrolled past the 'about me' section and if so minimise the header size.
+*/
 function checkScroll() {
 	const minAt = (hero.offsetTop + hero.offsetHeight) - headerBig;
 	header.classList[window.scrollY > minAt ? "add" : "remove"]("mini");
 }
+window.addEventListener("scroll", checkScroll);
 
+/*
+	Animate scrolling to the target element.
+*/
+const duration = 350;
 const quadraticEaseInOut = (t) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 function animateScroll() {
 	const timeThrough = Math.min(1, (performance.now() - startTime) / duration);
@@ -36,6 +43,10 @@ function animateScroll() {
 	}
 }
 
+/*
+	Event listeners for triggering automatic scrolling when clicking navigation links.
+*/
+let targetScroll, startScroll, startTime;
 [
 	...Array.from(document.querySelectorAll("header nav ul li a")),
 	document.querySelector("header h1 a"),
