@@ -44,21 +44,26 @@ function animateScroll() {
 }
 
 /*
-	Event listeners for triggering automatic scrolling when clicking navigation links.
+	Event handler for triggering automatic scrolling when clicking navigation links.
 */
 let targetScroll, startScroll, startTime;
+function triggerScroll(evt) {
+	evt.preventDefault();
+	targetEl = document.getElementById(evt.currentTarget.dataset["scroll"]);
+	startScroll = window.scrollY;
+	startTime = performance.now();
+	targetScroll = targetEl.offsetTop - (targetEl["id"] === "about-me" ? 0 : headerMini);
+
+	animateScroll();
+}
+
+/*
+	Attach event listeners to for automatic scroll links.
+*/
 [
 	...Array.from(document.querySelectorAll("header nav ul li a")),
 	document.querySelector("header h1 a"),
 	document.getElementsByClassName("hero-scroll-indicator")[0]
 ].forEach((e) => {
-	e.addEventListener("click", (evt) => {
-		evt.preventDefault();
-		targetEl = document.getElementById(evt.currentTarget.dataset["scroll"]);
-		startScroll = window.scrollY;
-		startTime = performance.now();
-		targetScroll = targetEl.offsetTop - (targetEl["id"] === "about-me" ? 0 : headerMini);
-
-		animateScroll();
-	});
+	e.addEventListener("click", triggerScroll);
 });

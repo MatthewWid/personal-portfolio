@@ -46,6 +46,7 @@
 				}
 			}
 		}
+		// Open the hamburger menu when selected
 		.button-hamburger:hover + nav, nav:active {
 			display: block;
 			animation: slideIn .2s ease-out forwards;
