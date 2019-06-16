@@ -114,7 +114,7 @@
 				span {
 					display: block !important;
 
-					&.links-spacer {
+					&:after {
 						display: none !important;
 					}
 				}
