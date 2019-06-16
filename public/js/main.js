@@ -1,3 +1,5 @@
+const hamburgerButton = document.getElementsByClassName("button-hamburger")[0]
+
 /*
 	Get the pixel height of the default and minimised header.
 */
@@ -39,6 +41,7 @@ function animateScroll() {
 	if (timeThrough != 1) {
 		requestAnimationFrame(animateScroll);
 	} else {
+		hamburgerButton.classList.remove("expanded");
 		history.pushState({}, "", targetEl["id"] === "hero" ? "#" : `#${targetEl["id"]}`);
 	}
 }
@@ -49,6 +52,7 @@ function animateScroll() {
 let targetScroll, startScroll, startTime;
 function triggerScroll(evt) {
 	evt.preventDefault();
+
 	targetEl = document.getElementById(evt.currentTarget.dataset["scroll"]);
 	startScroll = window.scrollY;
 	startTime = performance.now();
@@ -66,4 +70,11 @@ function triggerScroll(evt) {
 	document.getElementsByClassName("hero-scroll-indicator")[0]
 ].forEach((e) => {
 	e.addEventListener("click", triggerScroll);
+});
+
+/*
+	Trigger hamburger menu open/close in mobile view
+*/
+hamburgerButton.addEventListener("click", (evt) => {
+	hamburgerButton.classList.add("expanded");
 });

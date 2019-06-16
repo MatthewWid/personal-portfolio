@@ -47,7 +47,7 @@
 			}
 		}
 		// Open the hamburger menu when selected
-		.button-hamburger:hover + nav, nav:active {
+		.button-hamburger.expanded + nav {
 			display: block;
 			animation: slideIn .2s ease-out forwards;
 			
@@ -55,9 +55,9 @@
 				animation: openIn .2s ease forwards;
 			}
 			@for $i from 1 to 4 {
-			  li:nth-child(#{$i}) {
-			  	animation-delay: $i * .1s;
-			  }
+				li:nth-child(#{$i}) {
+					animation-delay: $i * .1s;
+				}
 			}
 		}
 		@keyframes slideIn {
