@@ -1,5 +1,3 @@
-const hamburgerButton = document.getElementsByClassName("button-hamburger")[0]
-
 /*
 	Get the pixel height of the default and minimised header.
 */
@@ -15,9 +13,7 @@ function getHeaderSizes() {
 
 	checkScroll();
 }
-// When the window resizes recalculate the new header sizes.
 window.addEventListener("resize", getHeaderSizes);
-// Calculate the header sizes on initial load.
 getHeaderSizes();
 
 /*
@@ -41,7 +37,6 @@ function animateScroll() {
 	if (timeThrough != 1) {
 		requestAnimationFrame(animateScroll);
 	} else {
-		hamburgerButton.classList.remove("expanded");
 		history.pushState({}, "", targetEl["id"] === "hero" ? "#" : `#${targetEl["id"]}`);
 	}
 }
@@ -62,7 +57,7 @@ function triggerScroll(evt) {
 }
 
 /*
-	Attach event listeners to for automatic scroll links.
+	Attach event listeners to links for automatic scrolling.
 */
 [
 	...Array.from(document.querySelectorAll("header nav ul li a")),
@@ -73,8 +68,15 @@ function triggerScroll(evt) {
 });
 
 /*
-	Trigger hamburger menu open/close in mobile view
+	Event listeners for opening and closing the hamburger menu in mobile view.
 */
-hamburgerButton.addEventListener("click", (evt) => {
-	hamburgerButton.classList.add("expanded");
+const hamburgerButton = document.getElementsByClassName("button-hamburger")[0]
+Array.from(document.querySelectorAll("header > h1, header > nav"))
+	.forEach((e) => {
+		e.addEventListener("click", () => {
+			hamburgerButton.classList.remove("expanded");
+		})
+	});
+hamburgerButton.addEventListener("click", () => {
+	hamburgerButton.classList.toggle("expanded");
 });
