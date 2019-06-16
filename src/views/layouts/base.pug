@@ -9,18 +9,16 @@ html(lang="en")
 		block head
 
 	body
-		block header
-			header
-				h1
-					a(href="/#" data-scroll="hero") M#[span •]W
-				button.button-hamburger
-					// https://www.iconfinder.com/icons/134216/hamburger_lines_menu_icon
-					img(src="./images/icons/hamburger.svg")
-				nav
-					ul
-						li: a(href="/#about-me" data-scroll="about-me") about me
-						li: a(href="/#projects" data-scroll="projects") projects
-						li: a(href="/#contact" data-scroll="contact") contact
-
+		header
+			h1
+				a(href="/#" data-scroll="hero") M#[span •]W
+			button.button-hamburger
+				// https://www.iconfinder.com/icons/134216/hamburger_lines_menu_icon
+				img(src="./images/icons/hamburger.svg")
+			nav
+				ul
+					li: a(href="/#about-me" data-scroll="about-me") about me
+					li: a(href="/#projects" data-scroll="projects") projects
+					li: a(href="/#contact" data-scroll="contact") contact
 		main.content
 			block content
