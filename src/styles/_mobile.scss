@@ -13,16 +13,7 @@
 		&.mini {
 			padding: .4rem 2rem;
 		}
-		.button-hamburger {
-			display: block;
-		}
-		nav {
-			position: absolute;
-			left: 0;
-			right: 0;
-			transform: translateY(100%);
-			display: none;
-			
+		nav {			
 			&:after {
 				content: "";
 				background-color: rgba(40, 40, 40, .8);
@@ -38,7 +29,6 @@
 				background-color: $bg-white;
 				font-size: 1.2rem;
 				border-bottom: 1px solid $border-mid-grey;
-				opacity: 0;
 				z-index: 1;
 
 				a {
@@ -46,38 +36,40 @@
 				}
 			}
 		}
-		// Open the hamburger menu when selected
-		.button-hamburger.expanded + nav {
+		.button-hamburger {
+			$transition-time: .2s;
 			display: block;
-			animation: slideIn .2s ease-out forwards;
-			
-			li {
-				animation: openIn .2s ease forwards;
-			}
-			@for $i from 1 to 4 {
-				li:nth-child(#{$i}) {
-					animation-delay: $i * .1s;
+
+			& + nav {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 100%;
+
+				opacity: 0;
+				pointer-events: none;
+				transition: opacity $transition-time ease-out;
+
+				li {
+					opacity: 0;
+					transition: opacity $transition-time ease-out;
+
+					@for $i from 1 to 4 {
+						&:nth-child(#{$i}) {
+							transition-delay: $i * $transition-time / 2;
+						}
+					}
 				}
 			}
-		}
-		@keyframes slideIn {
-			from {
-				opacity: 0;
-				bottom: 100%;
-				pointer-events: none;
-			}
-			to {
-				opacity: 1;
-				bottom: -1px;
-				pointer-events: auto;
-			}
-		}
-		@keyframes openIn {
-			from {
-				opacity: 0;
-			}
-			to {
-				opacity: 1;
+			&.expanded {
+				& + nav {
+					opacity: 1;
+					pointer-events: auto;
+
+					li {
+						opacity: 1;
+					}
+				}
 			}
 		}
 	}
