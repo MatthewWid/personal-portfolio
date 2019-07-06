@@ -57,7 +57,7 @@
 					opacity: 0;
 					transition: opacity $transition-time ease-out;
 
-					@for $i from 1 to 4 {
+					@for $i from 1 to 5 {
 						&:nth-child(#{$i}) {
 							transition-delay: $i * $transition-time / 2;
 						}

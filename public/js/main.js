@@ -63,7 +63,7 @@ function triggerScroll(evt) {
 	Attach event listeners to links for automatic scrolling.
 */
 [
-	...Array.from(document.querySelectorAll("header nav ul li a")),
+	...Array.from(document.querySelectorAll("header nav ul li a[data-scroll]")),
 	document.querySelector("header h1 a"),
 	document.getElementsByClassName("hero-scroll-indicator")[0]
 ].forEach((e) => {
