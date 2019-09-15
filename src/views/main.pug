@@ -20,6 +20,9 @@ block content
 		//- Takes a project name, a source code link (Optional) and a demo link (Optional)
 		//- Also requires a block of content to serve as the description for the project
 		//- Project technology is defined in a PUGJS array `tech` that the mixin uses, so change before each mixin is utilised
+		- tech = ["Node.js", "MongoDB", "Mongoose", "React", "SASS", "webpack", "Cloudinary"]
+		+project("Shoutout", "https://github.com/MatthewWid/Shoutout", "http://shoutoutsocial.herokuapp.com/")(class="shoutout")
+			p News sharing and social media site. Users can create an account, submit posts, upload images, like eachothers' posts and follow eachother.
 		- tech = ["PHP", "MySQL", "JavaScript", "SASS"];
 		+project("Bonk Skins", "https://github.com/MatthewWid/bonk-skins.io", "http://bonk-skins.herokuapp.com")(class="bonk-skins", tech)
 			p Public forum of game avatars that allows users to create their own avatars with a rich interactive user interface and then download and share their creations to the front page.

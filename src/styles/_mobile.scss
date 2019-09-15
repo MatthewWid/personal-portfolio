@@ -150,6 +150,13 @@
 					height: 40vh !important;
 				}
 			}
+			&.shoutout {
+				@media (max-width: 950px) and (min-width: 420px) {
+					.preview-image {
+						background-size: 50%;
+					}
+				}
+			}
 			&.bonk-skins {
 				background: linear-gradient(to bottom, $bonk-skins-bg-to 50%, $bonk-skins-bg-from);
 

@@ -2,7 +2,7 @@ section.project {
 	min-height: 800px;
 	display: flex;
 	
-	&:nth-of-type(even) {
+	&:nth-of-type(odd) {
 		flex-direction: row-reverse;
 	}
 	.project-section {
@@ -94,6 +94,24 @@ section.project {
 					}
 				}
 			}
+		}
+	}
+	&.shoutout {
+		.info {
+			color: $darkest-grey;
+
+			.info-link {
+				span:after {
+					background-color: $darkest-grey !important;
+				}
+				&:before {
+					filter: invert(82%);
+				}
+			}
+		}
+		.preview-image {
+			background-image: url("../images/previews/shoutout.png");
+			background-size: 90%;
 		}
 	}
 	&.bonk-skins {
