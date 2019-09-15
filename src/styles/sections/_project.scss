@@ -25,10 +25,26 @@ section.project {
 			> .info-title, > div {
 				margin-bottom: $line-height / 2;
 			}
-			a.info-title {
+			.info-title {
 				display: block;
 				color: inherit;
 				text-decoration: none;
+
+				h1 {
+					position: relative;
+
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						left: 0;
+						top: .7em;
+						width: 100px;
+						height: 16px;
+						z-index: -1;
+						background-color: #AAA;
+					}
+				}
 			}
 			.info-description {
 				font-size: 1.2rem;
@@ -98,16 +114,26 @@ section.project {
 			}
 		}
 	}
-	&.shoutout .preview-image {
-		background-image: url("../images/previews/shoutout.png");
-		background-size: 90%;
+	&.shoutout {
+		.info .info-title h1:before {
+			background-color: #EF3A95;
+		}
+		.preview-image {
+			background-image: url("../images/previews/shoutout.png");
+			background-size: 90%;
+		}
 	}
-	&.bonk-skins .preview-image {
-		background-image: url("../images/previews/bonkskins-preview.png");
-		background-size: cover;
+	&.bonk-skins {
+		.info .info-title h1:before {
+			background-color: #00CCB8;
+		}
+		.preview-image {
+			background-image: url("../images/previews/bonkskins-preview.png");
+			background-size: cover;
+		}
 	}
 	&.reddit-bot {
-		.info-title {
+		.info .info-title {
 			position: relative;
 
 			&:before {
@@ -117,6 +143,9 @@ section.project {
 				bottom: 100%;
 				font-size: .9rem;
 			}
+			h1:before {
+				background-color: #FF4500;
+			}
 		}
 		.preview-image {
 			background-image: url("../images/previews/reddit.png");
@@ -124,18 +153,27 @@ section.project {
 		}
 	}
 	&.strat-roulette {
+		.info {
+			max-width: 90%;
+
+			.info-title h1:before {
+				background-color: #FD9D24;
+			}
+		}
 		.preview-image {
 			background-image: url("../images/previews/stratroulette-preview.jpg");
 			background-size: cover;
 			width: 100%;
 			height: 100%;
 		}
-		.info {
-			max-width: 90%;
-		}
 	}
-	&.game-engine .preview-image {
-		background-image: url("../images/previews/whirl.png");
-		background-size: 54%;
+	&.game-engine {
+		.info .info-title h1:before {
+			background-color: #00B7FF;
+		}
+		.preview-image {
+			background-image: url("../images/previews/whirl.png");
+			background-size: 54%;
+		}
 	}
 }
