@@ -12,6 +12,7 @@ section.project {
 		align-items: center;
 
 		.preview-image {
+			box-shadow: inset -80px 0 40px -20px $bg-white;
 			background-repeat: no-repeat;
 			background-position: center;
 			width: 100%;
@@ -19,7 +20,7 @@ section.project {
 		}
 		.info {
 			max-width: 80%;
-			color: $soft-white;
+			color: $darkest-grey;
 			
 			> .info-title, > div {
 				margin-bottom: $line-height / 2;
@@ -67,7 +68,7 @@ section.project {
 							top: 100%;
 							width: 0%;
 							height: 1px;
-							background-color: $soft-white;
+							background-color: $darkest-grey;
 							transition: width .1s ease-out;
 						}
 						&:hover:after {
@@ -79,6 +80,7 @@ section.project {
 						display: inline-block;
 						width: 24px;
 						height: 24px;
+						filter: invert(82%);
 						background-size: contain;
 						background-repeat: no-repeat;
 						margin-right: .4em;
@@ -96,46 +98,24 @@ section.project {
 			}
 		}
 	}
-	&.shoutout {
-		.info {
-			color: $darkest-grey;
-
-			.info-link {
-				span:after {
-					background-color: $darkest-grey !important;
-				}
-				&:before {
-					filter: invert(82%);
-				}
-			}
-		}
-		.preview-image {
-			background-image: url("../images/previews/shoutout.png");
-			background-size: 90%;
-		}
+	&.shoutout .preview-image {
+		background-image: url("../images/previews/shoutout.png");
+		background-size: 90%;
 	}
-	&.bonk-skins {
-		background: linear-gradient(to left, $bonk-skins-bg-from, $bonk-skins-bg-to 50%);
-
-		.preview-image {
-			background-image: url("../images/previews/bonkskins-preview.png");
-			background-size: cover;
-			@include project-preview-fade($bonk-skins-bg-to);
-		}
+	&.bonk-skins .preview-image {
+		background-image: url("../images/previews/bonkskins-preview.png");
+		background-size: cover;
 	}
 	&.reddit-bot {
-		background: linear-gradient(to right, $reddit-bot-bg-from, $reddit-bot-bg-to);
-		
-		h1.info-title {
+		.info-title {
 			position: relative;
 
 			&:before {
 				content: "Unofficial";
 				position: absolute;
-				left: 3px;
+				left: 0px;
 				bottom: 100%;
 				font-size: .9rem;
-				color: #c0c0c0;
 			}
 		}
 		.preview-image {
@@ -144,25 +124,18 @@ section.project {
 		}
 	}
 	&.strat-roulette {
-		background: linear-gradient(to left, $strat-roulette-bg-from, $strat-roulette-bg-to 50%);
-
 		.preview-image {
 			background-image: url("../images/previews/stratroulette-preview.jpg");
 			background-size: cover;
 			width: 100%;
 			height: 100%;
-			@include project-preview-fade($strat-roulette-bg-to);
 		}
 		.info {
 			max-width: 90%;
 		}
 	}
-	&.game-engine {
-		background: linear-gradient(to right, $game-engine-bg-from, $game-engine-bg-to);
-
-		.preview-image {
-			background-image: url("../images/previews/whirl.png");
-			background-size: 54%;
-		}
+	&.game-engine .preview-image {
+		background-image: url("../images/previews/whirl.png");
+		background-size: 54%;
 	}
 }

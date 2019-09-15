@@ -148,6 +148,7 @@
 				}
 				.preview-image {
 					height: 40vh !important;
+					box-shadow: inset 0px -50px 30px -20px $bg-white;
 				}
 			}
 			&.shoutout {
@@ -156,26 +157,6 @@
 						background-size: 50%;
 					}
 				}
-			}
-			&.bonk-skins {
-				background: linear-gradient(to bottom, $bonk-skins-bg-to 50%, $bonk-skins-bg-from);
-
-				.preview-image {
-					@include project-preview-fade-mobile($bonk-skins-bg-to);
-				}
-			}
-			&.reddit-bot {
-				background: linear-gradient(to top, $reddit-bot-bg-from, $reddit-bot-bg-to);
-			}
-			&.strat-roulette {
-				background: linear-gradient(to top, $strat-roulette-bg-from, $strat-roulette-bg-to 50%);
-
-				.preview-image {
-					@include project-preview-fade-mobile($strat-roulette-bg-to);
-				}
-			}
-			&.game-engine {
-				background: linear-gradient(to top, $game-engine-bg-from, $game-engine-bg-to);
 			}
 		}
 		&.contact {
