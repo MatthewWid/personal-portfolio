@@ -3,6 +3,8 @@
 	"version": "1.0.0",
 	"repository": "git@github.com:MatthewWid/mwidd.com.git",
 	"license": "MIT",
+	"private": true,
+	"author": "Matthew Widdicombe",
 	"scripts": {
 		"sass": "node-sass --output-style compressed ./src/styles/ --output ./public/css/",
 		"sass:watch": "node-sass --output-style expanded --watch ./src/styles/ --output ./public/css/",
