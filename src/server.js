@@ -1,12 +1,13 @@
-require("dotenv").config({
-	path: "variables.env"
-});
-
 const path = require("path");
 const express = require("express");
 const serve_favicon = require("serve-favicon");
 const compression = require("compression");
 const app = express();
+
+require("dotenv").config({
+	path: path.join(__dirname, "../variables.env"),
+});
+
 const routes = require("./routes");
 
 // View engine
