@@ -1,33 +1,28 @@
 const path = require("path");
 const express = require("express");
-const serve_favicon = require("serve-favicon");
+const serveFavicon = require("serve-favicon");
 const compression = require("compression");
-const app = express();
-
-require("dotenv").config({
-	path: path.join(__dirname, "../variables.env"),
-});
-
+const server = express();
 const routes = require("./routes");
 
 // View engine
-app.set("view engine", "pug");
-app.set("views", path.join(__dirname, "/views"));
+server.set("view engine", "pug");
+server.set("views", path.join(__dirname, "/views"));
 
 // g-zip
-app.use(compression());
+server.use(compression());
 
 // Static files
-app.use(express.static(path.join(__dirname, "../public")));
+server.use(express.static(path.join(__dirname, "../public")));
 
 // Favicon
-app.use(serve_favicon(path.join(__dirname, "../public/favicon.ico")));
+server.use(serveFavicon(path.join(__dirname, "../public/favicon.ico")));
 
 // Routes
-app.use("/", routes);
+server.use("/", routes);
 
 // Port
-app.set("port", process.env.PORT || 80);
+server.set("port", process.env.PORT || 80);
 
 // Server
-const server = app.listen(app.get("port"), () => console.info(`Express server listening on PORT ${app.get("port")}. (${server.address().address})`));
+module.exports = server;
