@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-// Main Page
+// Pages
 router.get("/", (_, res) => res.render("main"));
 
 // Shortlinks
