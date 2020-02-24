@@ -1,6 +1,6 @@
 const path = require("path");
 const dotenv = require("dotenv");
-const server = require("./server");
+const server = require("./server.js");
 
 // Environment Variables
 dotenv.config({
@@ -11,4 +11,4 @@ dotenv.config({
 server.set("port", process.env.PORT || 80);
 
 // Server
-server.listen(server.get("port"), () => console.info(`Express server listening on PORT ${server.address().port}. (${server.address().address})`));
+const listener = server.listen(server.get("port"), () => console.info(`Express server listening on PORT ${listener.address().port}. (${listener.address().address})`));
