@@ -21,8 +21,5 @@ server.use(serveFavicon(path.join(__dirname, "../public/favicon.ico")));
 // Routes
 server.use("/", routes);
 
-// Port
-server.set("port", process.env.PORT || 80);
-
 // Server
 module.exports = server;
