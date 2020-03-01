@@ -4,7 +4,7 @@ const server = require("./server");
 
 // Environment Variables
 dotenv.config({
-	path: path.join(__dirname, "../../.env"),
+	path: path.resolve(__dirname, "../../.env"),
 });
 
 // Port
