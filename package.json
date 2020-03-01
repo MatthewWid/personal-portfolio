@@ -15,7 +15,7 @@
 		"server": "npm-run-all --sequential server:build server:start",
 		"server:watch": "nodemon --exec \"npm run server\" --watch ./src/server/",
 		"server:build": "webpack --env.env server",
-		"server:start": "node ./build-server/server.js"
+		"server:start": "node ./build-server/server.node.js"
 	},
 	"dependencies": {
 		"compression": "^1.7.4",
@@ -31,7 +31,8 @@
 		"terser-webpack-plugin": "^2.3.5",
 		"webpack": "^4.41.6",
 		"webpack-cli": "^3.3.11",
-		"webpack-merge": "^4.2.2"
+		"webpack-merge": "^4.2.2",
+		"webpack-node-externals": "^1.7.2"
 	},
 	"nodemonConfig": {
 		"delay": "2000",

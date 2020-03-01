@@ -4,6 +4,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 const BASEDIR = path.resolve(__dirname, "../", "../");
 
 const config = {
+	target: "web",
 	entry: {
 		index: path.join(BASEDIR, "./src/client/js/index.js"),
 	},
