@@ -1,8 +1,12 @@
+# Modules
 node_modules/
 
+# Environment
 *.env
 *.env.test
 
+# Generated
 .sass-cache
-public/css/*.css
-public/css/*.css.map
+public/js/
+public/css/
+build-*/

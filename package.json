@@ -1,17 +1,21 @@
 {
-	"name": "personal-portfolio",
-	"version": "1.0.0",
+	"name": "mwidd-site",
+	"version": "1.1.0",
 	"repository": "git@github.com:MatthewWid/mwidd.com.git",
 	"license": "MIT",
 	"private": true,
 	"author": "Matthew Widdicombe",
 	"scripts": {
-		"start": "npm-run-all --sequential sass server",
-		"dev": "npm-run-all sass --parallel **:watch",
-		"sass": "node-sass --output-style compressed ./src/client/scss/ --output ./public/css/",
-		"sass:watch": "node-sass --output-style expanded --watch ./src/client/scss/ --output ./public/css/",
-		"server": "node ./src/server/start.js",
-		"server:watch": "nodemon ./src/server/start.js"
+		"start": "npm-run-all --parallel client server",
+		"dev": "npm-run-all --parallel client:build-dev:watch server:watch",
+		"client": "npm run client:build-prod",
+		"client:build-dev": "webpack --env.env client --env.mode dev",
+		"client:build-dev:watch": "webpack --env.env client --env.mode dev --watch",
+		"client:build-prod": "webpack --env.env client --env.mode prod",
+		"server": "npm-run-all --sequential server:build server:start",
+		"server:watch": "nodemon --exec \"npm run server\" --watch ./src/server/",
+		"server:build": "webpack --env.env server",
+		"server:start": "node ./build-server/server.js"
 	},
 	"dependencies": {
 		"compression": "^1.7.4",
@@ -23,11 +27,14 @@
 		"serve-favicon": "^2.5.0"
 	},
 	"devDependencies": {
-		"nodemon": "^1.18.9"
+		"nodemon": "^1.18.9",
+		"terser-webpack-plugin": "^2.3.5",
+		"webpack": "^4.41.6",
+		"webpack-cli": "^3.3.11",
+		"webpack-merge": "^4.2.2"
 	},
 	"nodemonConfig": {
-		"watch": "./src/",
 		"delay": "2000",
-		"ext": "js,pug"
+		"ext": "js,ts,pug"
 	}
 }
