@@ -9,6 +9,7 @@
 		"start": "npm-run-all --parallel client server",
 		"dev": "npm-run-all --parallel client:build-dev:watch server:watch",
 		"client": "npm run client:build-prod",
+		"client:build": "npm run client:build-prod",
 		"client:build-dev": "webpack --env.env client --env.mode dev",
 		"client:build-dev:watch": "webpack --env.env client --env.mode dev --watch",
 		"client:build-prod": "webpack --env.env client --env.mode prod",

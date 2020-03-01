@@ -1,1 +1,12 @@
-{}
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"sourceMap": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true
+	}
+}
