@@ -1,8 +1,8 @@
 # mwidd.com
 
-The code that powers my developer portfolio page - [mwidd.com](http://www.mwidd.com/).
+The code that powers my personal site and developer portfolio page - [mwidd.com](http://www.mwidd.com/).
 
-Made with [Node](https://nodejs.org/en/), [Express](https://expressjs.com/), [Pug](https://pugjs.org/) and [SASS](https://sass-lang.com/).
+Made with [Node](https://nodejs.org/en/), [Express](https://expressjs.com/), [Pug](https://pugjs.org/) and [SASS](https://sass-lang.com/) and over-engineered just for fun.
 
 ## Installation and Usage
 
