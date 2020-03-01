@@ -10,7 +10,7 @@ const config = {
 	},
 	output: {
 		path: path.join(BASEDIR, "./public/"),
-		publicPath: "/static/",
+		publicPath: "/",
 		filename: "js/[name].bundle.js",
 	},
 	optimization: {

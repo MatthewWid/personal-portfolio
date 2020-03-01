@@ -1,6 +1,5 @@
 const path = require("path");
 const express = require("express");
-const serveFavicon = require("serve-favicon");
 const compression = require("compression");
 const server = express();
 const routes = require("./routes");
@@ -14,9 +13,6 @@ server.use(compression());
 
 // Static files
 server.use(express.static(path.join(__dirname, "../../public")));
-
-// Favicon
-server.use(serveFavicon(path.join(__dirname, "../../public/favicon.ico")));
 
 // Routes
 server.use("/", routes);
