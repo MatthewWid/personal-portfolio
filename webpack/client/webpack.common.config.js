@@ -8,7 +8,7 @@ const BASEDIR = path.resolve(__dirname, "../", "../");
 const config = {
 	target: "web",
 	entry: {
-		"js/index": path.join(BASEDIR, "./src/client/js/index.js"),
+		"js/index": path.join(BASEDIR, "./src/client/ts/index.ts"),
 		"css/index": path.join(BASEDIR, "./src/client/scss/index.scss"),
 	},
 	output: {
