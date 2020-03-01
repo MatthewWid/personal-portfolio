@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 // Pages
-router.get("/", (_, res) => res.render("main"));
+router.get("/", (_, res) => res.render("index"));
 
 // Shortlinks
 router.get("/github", (_, res) => res.redirect("https://github.com/MatthewWid"));
