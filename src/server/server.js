@@ -13,10 +13,10 @@ server.set("views", path.join(__dirname, "/views"));
 server.use(compression());
 
 // Static files
-server.use(express.static(path.join(__dirname, "../public")));
+server.use(express.static(path.join(__dirname, "../../public")));
 
 // Favicon
-server.use(serveFavicon(path.join(__dirname, "../public/favicon.ico")));
+server.use(serveFavicon(path.join(__dirname, "../../public/favicon.ico")));
 
 // Routes
 server.use("/", routes);
