@@ -3,7 +3,7 @@ import Koa from "koa";
 import views from "koa-views";
 import compress from "koa-compress";
 import serveStatic from "koa-static";
-import router from "./routes";
+import {router} from "./routes";
 
 export const server = new Koa();
 

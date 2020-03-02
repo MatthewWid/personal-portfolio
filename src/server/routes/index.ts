@@ -1,7 +1,7 @@
 import {DefaultState, Context} from "koa";
 import Router from "@koa/router";
 
-const router = new Router<DefaultState, Context>();
+export const router = new Router<DefaultState, Context>();
 
 // Pages
 router.get("/", async (ctx, next) => {
@@ -26,5 +26,3 @@ router.get(["/resume", "/cv"], async (ctx) => {
 		"https://drive.google.com/file/d/1gdcjk3jynA8Kt6ie7Kev1gBmLGcs8hQe/view"
 	);
 });
-
-export default router;
