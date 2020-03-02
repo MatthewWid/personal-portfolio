@@ -1,11 +1,18 @@
 {
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules"],
 	"compilerOptions": {
 		"target": "ES6",
+		"module": "ESNext",
 		"sourceMap": true,
 		"noImplicitAny": true,
 		"strictNullChecks": false,
 		"strictFunctionTypes": true,
 		"strictBindCallApply": true,
-		"noImplicitThis": true
+		"noImplicitThis": true,
+		"moduleResolution": "node",
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"typeRoots": ["./node_modules/@types/"]
 	}
 }

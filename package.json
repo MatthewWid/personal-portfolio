@@ -19,13 +19,22 @@
 		"server:start": "node ./build-server/server.node.js"
 	},
 	"dependencies": {
-		"compression": "^1.7.4",
-		"dotenv": "^6.2.0",
-		"express": "^4.16.4",
+		"@koa/router": "^8.0.8",
+		"dotenv": "^8.2.0",
+		"koa": "^2.11.0",
+		"koa-compress": "^3.0.0",
+		"koa-static": "^5.0.0",
+		"koa-views": "^6.2.1",
 		"npm-run-all": "^4.1.5",
 		"pug": "^2.0.3"
 	},
 	"devDependencies": {
+		"@types/koa": "^2.11.2",
+		"@types/koa-compress": "^2.0.9",
+		"@types/koa-static": "^4.0.1",
+		"@types/koa-views": "^2.0.4",
+		"@types/koa__router": "^8.0.2",
+		"@types/node": "^13.7.7",
 		"css-loader": "^3.4.2",
 		"mini-css-extract-plugin": "^0.9.0",
 		"node-sass": "^4.13.1",
