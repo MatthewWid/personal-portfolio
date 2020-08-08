@@ -16,7 +16,8 @@
 		"server": "npm-run-all --sequential server:build server:start",
 		"server:watch": "nodemon --exec \"npm run server\" --watch ./src/server/",
 		"server:build": "webpack --env.env server",
-		"server:start": "node ./build-server/server.node.js"
+		"server:start": "node ./build-server/server.node.js",
+		"heroku-prebuild": "npm install --only=dev"
 	},
 	"dependencies": {
 		"@koa/router": "^8.0.8",
