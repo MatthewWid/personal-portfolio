@@ -26,7 +26,7 @@ router.get("/.vimrc", async (_, res) => {
 
 	if (response.ok) {
 		const body = await response.text();
-		res.send(body);
+		res.type("text/plain").send(body);
 	} else {
 		res.status(404).send("Failed to fetch .vimrc from Dropbox.");
 	}
