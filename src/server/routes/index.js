@@ -14,5 +14,6 @@ router.get(["/resume", "/cv"], (_, res) => res.redirect("https://drive.google.co
 // Config Files
 router.get("/.vimrc", dropboxFile(process.env.DROPBOX_VIMRC_PATH));
 router.get("/.bash_aliases", dropboxFile(process.env.DROPBOX_BASH_ALIASES_PATH));
+router.get("/.tmux.conf", dropboxFile(process.env.DROPBOX_TMUX_CONF_PATH));
 
 module.exports = router;
