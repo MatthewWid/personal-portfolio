@@ -1,7 +1,7 @@
 const path = require("path");
 const fetch = require("node-fetch");
 
-const dropboxFile = async (req, res) => {
+const download = async (req, res) => {
 	const rawPath = req.params[0];
 
 	const safePath = path.join("/", rawPath);
@@ -29,4 +29,4 @@ const dropboxFile = async (req, res) => {
 	}
 };
 
-module.exports = dropboxFile;
+module.exports = download;

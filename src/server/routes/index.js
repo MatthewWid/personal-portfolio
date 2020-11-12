@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const dropboxFile = require("../middleware/dropboxFile");
+const download = require("../middleware/download");
 
 // Pages
 router.get("/", (_, res) => res.render("index"));
@@ -12,6 +12,6 @@ router.get("/codepen", (_, res) => res.redirect("https://codepen.io/MatthewWid")
 router.get(["/resume", "/cv"], (_, res) => res.redirect("https://drive.google.com/file/d/1gdcjk3jynA8Kt6ie7Kev1gBmLGcs8hQe/view"));
 
 // Dotfiles
-router.get("/dl/*", dropboxFile);
+router.get("/dl/*", download);
 
 module.exports = router;
