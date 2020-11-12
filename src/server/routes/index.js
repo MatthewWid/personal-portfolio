@@ -12,6 +12,6 @@ router.get("/codepen", (_, res) => res.redirect("https://codepen.io/MatthewWid")
 router.get(["/resume", "/cv"], (_, res) => res.redirect(process.env.RESUME_URL));
 
 // Dotfiles
-router.get("/dl/*", download);
+router.get(/(?:download|dl|config|c|dotfiles|dot)\/(.*)/, download);
 
 module.exports = router;
